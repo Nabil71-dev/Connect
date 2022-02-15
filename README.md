@@ -77,3 +77,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 * don't forget to install node & npm/yarn in your local machine
 * Here i'm using react-router v6.2.1
 * for styling im going to use moduler css && bootstrap v5.1.3 class for global css
+* font-awesome for icons
