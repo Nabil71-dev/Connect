@@ -1,17 +1,20 @@
+/* Main background style*/
 .main-bg {
   background: #061216;
   min-height: 100vh;
   color: #ffffff;
   font-size: 18px;
-  box-sizing: border-box;
-  display:flex;
-  align-items: center;
+  position:relative;
 }
+
+/* Alignment for the whole site : use if any time needed */
 .alignCenter{
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+/* Input filed and buttons default style */
 .input-field,.button-main {
   border: 2px solid #538b84;
   border-radius: 6px;
@@ -32,6 +35,13 @@
   background: #0d201c;
   color: #bebebe;
 }
+
+/* Content/cards default color  */
+.contentBg{
+  background: #305a538a;
+}
+
+/* Error color  */
 .error{
   color:red;
 }

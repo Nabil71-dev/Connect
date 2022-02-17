@@ -1,0 +1,81 @@
+/* Side nav box model */
+.navContainer{
+  width:20%;
+}
+
+/* Side nav container style */
+.sideNavbg {
+  position: fixed;
+  width: 20%;
+  text-align: center;
+}
+/* Side nav Nav-button alignment */
+.align {
+  text-align: left;
+}
+
+.navLogo{
+  margin:13% 0 27% 10%; 
+}
+.navBtn{
+  margin:0 0 30% 7%; 
+}
+.navBtn>li{
+  list-style: none;
+  margin:13% 0 0 0;
+}
+.navBtn>li>a,.dropCard>li>a{
+  font-size: 1.6rem;
+  font-weight:600;
+  color:#BEBEBE;
+  text-decoration: none;
+}
+
+/* Dropdown menu pop up card style */
+.dropCard>li>a:hover{
+   color:rgb(15, 167, 86);
+}
+.dropPosition{
+  position: relative;
+}
+.dropCard:before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 92px;
+  border-top: 13px solid transparent;
+  border-right: 26px solid #155e47c4;
+  border-bottom: 13px solid transparent;
+}
+.dropCard{
+  background: #155e47c4;
+  position: absolute;
+  left:80%;
+  top:22%;
+  width:280px;
+  border-radius: 8px;
+}
+.dropCard>li{
+   margin:2% 2% 5% 2%;
+}
+
+/* Style for icon margin */
+.icon{
+  margin:0 10px 0 0;
+}
+
+/* Logout button style */
+.logoutButton {
+  background: #0d201c;
+  color: #bebebe;
+  font-weight: 700;
+  width: 180px;
+  height: 40px;
+  border: none;
+  border-radius: 6px;
+  margin:0 0 7% 0;
+}
+.logoutButton:hover{
+  background: #147758c4;
+  color: #0d201c;
+}

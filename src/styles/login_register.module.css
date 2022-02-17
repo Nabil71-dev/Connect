@@ -1,7 +1,9 @@
 .cardBg {
   height: 550px;
-  background: rgba(48, 90, 83, 0.54);
   border-radius: 10px;
+  position: absolute;
+  top:9%;
+  left: 9%;
 }
 .lMargin {
   margin-left: 45px;

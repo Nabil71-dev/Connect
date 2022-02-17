@@ -3,7 +3,7 @@ import './styles/bootstrap.min.css';
 import './styles/global.css';
 import Login from './components/login_register/Login';
 import Registration from './components/login_register/Registration';
-
+import Layout from './components/homelayout/Layout';
 
 function App() {
   return (
@@ -11,6 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/home/*" element={<Layout />} />
         <Route path="/register" element={<Registration />} />
       </Routes>
     </div>

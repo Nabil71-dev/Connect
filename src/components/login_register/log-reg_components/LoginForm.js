@@ -1,6 +1,7 @@
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import { InputField } from './InputField';
+import { NavLink } from 'react-router-dom';
 
 const LoginForm = () => {
     const validate = Yup.object({
@@ -17,7 +18,8 @@ const LoginForm = () => {
                         <Form>
                             <InputField name="email" type="text" placeholder=" Enter your mail" /> <br />
                             <InputField name="password" type="password" placeholder=" Enter your password" /> <br />
-                            <button className="button-main" type="submit">Login</button>
+                            {/* Dummy links to check routes */}
+                            <NavLink to="/home"> <button className="button-main" type="submit">Login</button></NavLink>
                         </Form>
                     </div>
                 )}

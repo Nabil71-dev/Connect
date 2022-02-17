@@ -2,13 +2,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRightToBracket } from '@fortawesome/free-solid-svg-icons'
 
 import LoginForm from './log-reg_components/LoginForm';
-import SideCard from './log-reg_components/Side-Card'
-import logo from '../../styles/assets/Logo.svg'
+import SideCard from './log-reg_components/Side-Card';
+import logo from '../../styles/assets/Logo.svg';
 import style from '../../styles/login_register.module.css'
 
 const Login = () => {
     return (
-        <div className={`${style.cardBg} container`}>
+        <div className={`${style.cardBg} container contentBg`}>
             <div className="row">
                 <div className={`${style.lMargin} col-7 mt-5`}>
                     <img src={logo} alt="logo" />

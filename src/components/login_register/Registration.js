@@ -9,7 +9,7 @@ import style from '../../styles/login_register.module.css';
 
 const Registration = () => {
     return (
-        <div className={`${style.cardBg} container`}>
+        <div className={`${style.cardBg} container contentBg`}>
             <div className="row">
                 <div className={`${style.lMargin} col-7 mt-5`}>
                     <img src={logo} alt="logo" />
