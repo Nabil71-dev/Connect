@@ -14,10 +14,10 @@ const Layout = () => {
                         <Topnav />
                     </div>
                     {/* <div className="col-8 border border-primary">
-                        
+                        <h1>Hi im post section</h1>
                     </div>
                     <div className="col-4 border border-danger">
-                        
+                        <h1>Hi im work section</h1>
                     </div> */}
                 </div>
                 {/* <Routes>
