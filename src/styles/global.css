@@ -45,3 +45,15 @@
 .error{
   color:red;
 }
+
+/* for transparent background */
+.bg-transparent{
+  background: transparent;
+  border:none;
+  color:#d1d1d1;
+}
+
+/* test width */
+.w{
+  width:100%;
+}
