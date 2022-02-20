@@ -1,6 +1,7 @@
 import SideNav from "./side_nav/SideNav";
 import style from '../../styles/navbar.module.css';
 import Topnav from "./top-nav/Topnav";
+import NotificationAside from "./trending-vacancy/NotifyAside";
 
 const Layout = () => {
     return (
@@ -13,12 +14,12 @@ const Layout = () => {
                     <div className="col-12 d-flex mt-4">
                         <Topnav />
                     </div>
-                    {/* <div className="col-8 border border-primary">
-                        <h1>Hi im post section</h1>
+                    <div className="col-8 mt-4">
+                        
                     </div>
-                    <div className="col-4 border border-danger">
-                        <h1>Hi im work section</h1>
-                    </div> */}
+                    <div className="col-4 mt-4">
+                        <NotificationAside />
+                    </div>
                 </div>
                 {/* <Routes>
                     <Route path="/temp" element={<Temp />} />

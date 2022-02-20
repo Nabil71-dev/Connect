@@ -1,0 +1,43 @@
+.icon,
+.shareContainer > h4,
+.toppostContainer > h4,
+.toppostDetails > h5 {
+  font-weight: 600;
+}
+.shareContainer > div {
+  margin: 0 5% 0 0;
+  background: #538b84;
+  height: 30px;
+  width: 35px;
+  cursor: pointer;
+}
+.addicon {
+  font-size: 1.5rem;
+  color: #16292f;
+}
+.addicon:hover {
+  color: #d1d1d1;
+}
+.shareContainer > h4 {
+  padding: 1% 0 0 0;
+}
+.toppostContainer > div {
+  margin: 15px 0 10px 0;
+}
+.toppostDetails {
+  margin: 0 16px 0 0;
+}
+.toppostDetails>h5{
+  color:#a1a1a1;
+}
+.rateicon {
+  font-size: 1.2rem;
+  margin: 0 8px 0 0;
+}
+.list {
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  background-color: rgb(250, 250, 250);
+  margin: 8% 4% 0 2%;
+}
