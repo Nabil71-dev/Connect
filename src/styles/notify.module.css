@@ -4,7 +4,7 @@
 .toppostDetails > h5 {
   font-weight: 600;
 }
-.shareContainer > div {
+.shareAdd {
   margin: 0 5% 0 0;
   background: #538b84;
   height: 30px;
@@ -27,8 +27,8 @@
 .toppostDetails {
   margin: 0 16px 0 0;
 }
-.toppostDetails>h5{
-  color:#a1a1a1;
+.toppostDetails > h5 {
+  color: #a1a1a1;
 }
 .rateicon {
   font-size: 1.2rem;
@@ -38,6 +38,31 @@
   height: 7px;
   width: 7px;
   border-radius: 50%;
-  background-color: rgb(250, 250, 250);
+  background: rgb(250, 250, 250);
   margin: 8% 4% 0 2%;
+}
+
+/* Post Create Container --Modal-- */
+.modalContainer {
+  position: absolute;
+  background: rgba(13, 32, 28, 0.774);
+  height: 100vh;
+  width: 100%;
+  top: 0%;
+  right: 0%;
+}
+.modal{
+  width:70%;
+}
+.inputwidth,.textArea{
+   width:580px;
+}
+.textArea{
+  height:180px;
+}
+.btnContainer{
+  text-align: center;
+}
+.btnContainer>button{
+  margin:0 10px 0 10px;
 }

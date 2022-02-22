@@ -1,6 +1,6 @@
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
-import { InputField } from './InputField';
+import { InputField } from '../../input-field/InputField';
 import { NavLink } from 'react-router-dom';
 
 const LoginForm = () => {
@@ -16,8 +16,8 @@ const LoginForm = () => {
                 {formik => (
                     <div>
                         <Form>
-                            <InputField name="email" type="text" placeholder=" Enter your mail" /> <br />
-                            <InputField name="password" type="password" placeholder=" Enter your password" /> <br />
+                            <InputField className="input-field" name="email" type="text" placeholder=" Enter your mail" /> <br />
+                            <InputField className="input-field" name="password" type="password" placeholder=" Enter your password" /> <br />
                             {/* Dummy links to check routes */}
                             <NavLink to="/home"> <button className="button-main" type="submit">Login</button></NavLink>
                         </Form>

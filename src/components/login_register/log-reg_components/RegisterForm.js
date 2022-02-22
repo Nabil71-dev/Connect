@@ -1,6 +1,6 @@
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
-import { InputField } from './InputField';
+import { InputField } from '../../input-field/InputField';
 
 const RegisterForm = () => {
 
@@ -19,9 +19,9 @@ const RegisterForm = () => {
                 {formik => (
                     <div>
                         <Form>
-                            <InputField name="email" type="text" placeholder=" Enter your mail" /> <br/>
-                            <InputField name="password" type="password" placeholder=" Enter your password" /> <br/>
-                            <InputField name="confirmpass" type="password" placeholder=" Confirm password" /> <br/>
+                            <InputField className="input-field" name="email" type="text" placeholder=" Enter your mail" /> <br/>
+                            <InputField className="input-field" name="password" type="password" placeholder=" Enter your password" /> <br/>
+                            <InputField className="input-field" name="confirmpass" type="password" placeholder=" Confirm password" /> <br/>
                             <button className="button-main" type="submit" >Register</button>
                         </Form>
                     </div>
