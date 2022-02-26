@@ -6,13 +6,14 @@ const RegisterForm = () => {
 
     const validate = Yup.object({
         email: Yup.string().email('Invalid mail').required('Email Required'),
-        password: Yup.string().matches(/^(?=.*[A-Za-z])(?=.*d)(?=.*[@$!%*#?&])[A-Za-zd@$!%*#?&]{8,}$/,
-            "Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and one special case Character"
+        password: Yup.string().matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).*$/,
+            "Must Contain 8 Characters, One Uppercase, One Lowercase, One Number"
         ).required('Password Required'),
         confirmpass: Yup.string().oneOf([Yup.ref('password'), null], 'password must be same')
             .required('Confirm Password Required'),
     });
 
+    
     return (
         <div>
             <Formik initialValues={{ email: '', password: '', confirmpass: '' }} validationSchema={validate}>

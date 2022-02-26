@@ -1,3 +1,7 @@
+//Must do : after front end completion must refactor components
+//Make all nav-button and login reg form more reusable
+
+
 import { Routes, Route } from 'react-router-dom';
 import './styles/bootstrap.min.css';
 import './styles/global.css';

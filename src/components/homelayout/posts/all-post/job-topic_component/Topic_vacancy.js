@@ -5,6 +5,7 @@ import profile_pic from '../../../../../styles/assets/Profile_pic.png';
 import style from '../../../../../styles/topics_vacancy.module.css';
 import Article from './PostDescription';
 import Comments from './Comments';
+import { Link } from 'react-router-dom';
 
 const demoText = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book . It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.";
 
@@ -19,7 +20,7 @@ function TopicsVacancy({ props }) {
         <>
             <div className={`${style.postContainer} contentBg container`}>
                 <div className="d-flex">
-                    <img src={profile_pic} alt="Profile_Picture" className={`${style.profilePic}`} />
+                    <Link to=""><img src={profile_pic} alt="Profile_Picture" className={`${style.profilePic}`} /></Link>
                     <div>
                         <h4 className={`${style.username} ${style.profile_name}`}>Nabil71-dev</h4>
                         <small>Feb 24, 2022</small>

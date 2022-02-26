@@ -6,8 +6,7 @@ import { NavLink } from 'react-router-dom';
 const LoginForm = () => {
     const validate = Yup.object({
         email: Yup.string().email('Invalid mail').required('Email Required'),
-        password: Yup.string().min(6, 'Password must be greater than 6 character').max(9, 'Password must be less than or equal 9 character')
-            .required('Password Required'),
+        password: Yup.string().required('Password Required'),
     });
 
     return (
