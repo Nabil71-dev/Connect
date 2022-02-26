@@ -10,21 +10,21 @@ const Navbutton = () => {
         <div className={`${style.align}`}>
             <ul className={`${style.navBtn}`}>
                 <li>
-                    <NavLink className={({ isActive }) => (isActive ? "text-success" : '')} to="" >
+                    <NavLink className={({ isActive }) => (isActive ? "text-success" : '')} to="/home/allposts" >
                         <FontAwesomeIcon icon={faHouse} className={style.icon} />Home</NavLink>
                 </li>
                 <li><Dropdown /></li>
                 <li>
-                    <NavLink className={({ isActive }) => (isActive ? "text-success" : '')} to="">
+                    <NavLink className={({ isActive }) => (isActive ? "text-success" : '')} to="/home/jobposts">
                         <FontAwesomeIcon icon={faMailBulk} className={style.icon} />Job Post</NavLink>
                 </li>
-                <li><NavLink className={({ isActive }) => (isActive ? "text-success" : '')} to="">
+                <li><NavLink className={({ isActive }) => (isActive ? "text-success" : '')} to="/home/footprints">
                     <FontAwesomeIcon icon={faAddressBook} className={style.icon} />Footprints</NavLink>
                 </li>
-                <li><NavLink className={({ isActive }) => (isActive ? "text-success" : '')} to="">
+                <li><NavLink className={({ isActive }) => (isActive ? "text-success" : '')} to="/home/lookingjob">
                     <FontAwesomeIcon icon={faUnlock} className={style.icon} />Open</NavLink>
                 </li>
-                <li><NavLink className={({ isActive }) => (isActive ? "text-success" : '')} to="">
+                <li><NavLink className={({ isActive }) => (isActive ? "text-success" : '')} to="/messanger">
                     <FontAwesomeIcon icon={faFacebookMessenger} className={style.icon} />Messenger</NavLink>
                 </li>
             </ul>

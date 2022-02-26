@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRectangleList } from '@fortawesome/free-solid-svg-icons';
 import style from '../../../../styles/navbar.module.css';
 
-const items = ["Software", "Ai/ML", "distributed-system", "Others"];
+const items = ["Software", "Ai-ML", "distributed-system", "Others"];
 const Dropdown = () => {
     // const ref = useRef(null);
     const [active, setActive] = useState(false);
@@ -28,11 +28,11 @@ const Dropdown = () => {
 
     return (
         <>
-            <NavLink to="" className={`${style.dropPosition}`} onClick={openDropdown} ><FontAwesomeIcon icon={faRectangleList} className={style.icon}/>Topic</NavLink>
+            <h3 className={`${style.dropPosition}`} onClick={openDropdown} ><FontAwesomeIcon icon={faRectangleList} className={style.icon}/>Topic</h3>
             {
                 active && <ul /*ref={ref}*/ className={`${style.dropCard}`}>
                     {items.map((item) => (
-                        <li key={Math.random()}> <NavLink to="">{item}</NavLink> </li>
+                        <li key={Math.random()}> <NavLink to={`/home/${item}`}>{item}</NavLink> </li>
                     ))}
                 </ul>
             }
