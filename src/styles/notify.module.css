@@ -18,6 +18,11 @@
 .addicon:hover {
   color: #d1d1d1;
 }
+.shareContainer{
+  display: flex;
+  align-items: center;
+}
+
 .shareContainer > h4 {
   padding: 1% 0 0 0;
 }

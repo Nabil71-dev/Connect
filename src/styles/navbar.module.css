@@ -1,3 +1,5 @@
+/* ---Navbtn is used from profile components ; must refactor it when concern-- */
+
 /* Side nav box model */
 .navContainer{
   width:25.5%;
@@ -24,7 +26,7 @@
   list-style: none;
   margin:13% 0 0 0;
 }
-.navBtn>li>a,.dropCard>li>a{
+.navBtn>li>a,.dropCard>li>a,.Navbtn{
   font-size: 1.6rem;
   font-weight:600;
   color:#BEBEBE;
@@ -32,7 +34,7 @@
 }
 
 /* Dropdown menu pop up card style */
-.dropCard>li>a:hover{
+.dropCard>li>a:hover,.Navbtn:hover{
    color:rgb(15, 167, 86);
 }
 .dropPosition{

@@ -10,7 +10,7 @@ function JobFootprint({ props }) {
         <>
             <div className={`${style.cardContainer} contentBg container`}>
                 <div className="d-flex">
-                    <Link to=""><img src={profile_pic} alt="" /> </Link>
+                    <Link to="/profile"><img src={profile_pic} alt="" /> </Link>
                     <div>
                         <h4>Nabil71-dev</h4>
                         <small>Position</small>

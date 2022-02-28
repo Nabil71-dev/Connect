@@ -20,7 +20,7 @@ function TopicsVacancy({ props }) {
         <>
             <div className={`${style.postContainer} contentBg container`}>
                 <div className="d-flex">
-                    <Link to=""><img src={profile_pic} alt="Profile_Picture" className={`${style.profilePic}`} /></Link>
+                    <Link to="/profile"><img src={profile_pic} alt="Profile_Picture" className={`${style.profilePic}`} /></Link>
                     <div>
                         <h4 className={`${style.username} ${style.profile_name}`}>Nabil71-dev</h4>
                         <small>Feb 24, 2022</small>

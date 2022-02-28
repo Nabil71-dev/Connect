@@ -7,6 +7,11 @@
   position:relative;
 }
 
+/* Common font weight for whole site */
+h1,h2,h3,h4,h5,h6{
+  font-weight: 600;
+}
+
 /* Alignment for the whole site : use if any time needed */
 .alignCenter{
   display: flex;
@@ -35,7 +40,10 @@
   background: #0d201c;
   color: #bebebe;
 }
-
+/* some fonts weight */
+.h-12{
+height:12px;
+}
 /* Content/cards default color  */
 .contentBg{
   background: #305a538a;

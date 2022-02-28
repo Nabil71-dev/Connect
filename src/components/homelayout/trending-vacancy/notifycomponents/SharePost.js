@@ -12,7 +12,7 @@ function SharePost() {
     }
 
     return (
-        <div className={`${style.shareContainer} alignCenter`}>
+        <div className={`${style.shareContainer}`}>
             <div onClick={modalSet} className={`${style.shareAdd} alignCenter`} >
                <FontAwesomeIcon icon={faPlus} className={`${style.addicon}`}/>
             </div>

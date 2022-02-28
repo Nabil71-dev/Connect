@@ -8,6 +8,8 @@ import './styles/global.css';
 import Login from './components/login_register/Login';
 import Registration from './components/login_register/Registration';
 import Layout from './components/homelayout/Layout';
+import ProfileLayout from './components/homelayout/profile/Profile_Layout';
+import EditProfile from './components/homelayout/profile/profile-component/EditProfile';
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/home/*" element={<Layout />} />
         <Route path="/register" element={<Registration />} />
+        <Route path="/profile" element={<ProfileLayout />} />
+        <Route path="/editProfile" element={<EditProfile />} />
       </Routes>
     </div>
   );
