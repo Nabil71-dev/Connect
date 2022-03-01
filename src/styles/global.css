@@ -25,9 +25,9 @@ h1,h2,h3,h4,h5,h6{
   border-radius: 6px;
   color: #d1d1d1;
 }
-.input-field {
+.input-field{
   background: #0d201c;
-  width:350px;
+  width:320px;
   height:40px;
 }
 .button-main {
@@ -40,6 +40,11 @@ h1,h2,h3,h4,h5,h6{
   background: #0d201c;
   color: #bebebe;
 }
+
+.input{
+  width:48%;
+}
+
 /* some fonts weight */
 .h-12{
 height:12px;
