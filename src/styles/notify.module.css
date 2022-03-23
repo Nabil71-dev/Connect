@@ -18,7 +18,7 @@
 .addicon:hover {
   color: #d1d1d1;
 }
-.shareContainer{
+.shareContainer {
   display: flex;
   align-items: center;
 }
@@ -48,17 +48,6 @@
 }
 
 /* Post Create Container --Modal-- */
-.modalContainer {
-  position: absolute;
-  background: rgba(13, 32, 28, 0.774);
-  height: 100vh;
-  width: 100%;
-  top: 0%;
-  right: 0%;
-}
-.modal{
-  width:70%;
-}
 .inputwidth,.textArea{
    width:580px;
 }
@@ -70,4 +59,4 @@
 }
 .btnContainer>button{
   margin:0 10px 0 10px;
-}
+} 
