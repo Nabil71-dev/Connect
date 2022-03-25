@@ -1,20 +1,14 @@
 .commentContainer{
     border-top: 2px solid gray;
 }
-.commentContainer>div{
-    margin:10px;
-}
 .comment{
     border-bottom: 1px solid rgb(80, 80, 80);
 }
 .commenterImg{
     height:25px;
     width:25px;
-    margin:0 5px 6px 0;
 }
-.commenter>h6{
-    font-weight: 600;
-}
+
 .commentContainer>div>p{
     font-size:1rem;
 }
@@ -25,8 +19,4 @@
 .commentContainer>div>button{
     background: none;
     border:none;
-}
-.icon{
-    color:#ffffff;
-   font-size: 1.35rem;
 }

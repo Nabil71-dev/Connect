@@ -12,8 +12,8 @@ function SharePost() {
     }
 
     return (
-        <div className={`${style.shareContainer}`}>
-            <div onClick={modalSet} className={`${style.shareAdd} alignCenter`} >
+        <div className="d-flex align-items-center">
+            <div onClick={modalSet} className={`${style.shareAdd} me-3 alignCenter`} >
                <FontAwesomeIcon icon={faPlus} className={`${style.addicon}`}/>
             </div>
             <h4>Share your thoughts / Job Post</h4>

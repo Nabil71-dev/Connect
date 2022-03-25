@@ -12,6 +12,7 @@ const customStyles = {
         background:'rgba(13, 32, 28, 0.774)',
     },
     content: {
+        width:'580px',
         top: '50%',
         left: '50%',
         right: 'auto',
@@ -24,6 +25,7 @@ const customStyles = {
 };
 
 Modal.setAppElement('#root');
+
 
 function PostModal({ modalSet }) {
 
@@ -44,13 +46,13 @@ function PostModal({ modalSet }) {
                     {formik => (
                         <div>
                             <Form>
-                                <InputField className={`${style.inputwidth} input-field`} name="title" type="text" placeholder=" Enter post title" /> <br />
+                                <InputField className={`w-100 input-field`} name="title" type="text" placeholder=" Enter post title" /> <br />
                                 <Selector /> <br />
-                                <Textarea className={`${style.textArea} input-field`} name="briefPost" placeholder=" Brief post" /> <br />
-                                <InputField className={`${style.uploadfile} input-field`} name="photo" type="file" />
-                                <div className={`${style.btnContainer} mt-5`}>
-                                    <button className="button-main" type="submit">Submit</button>
-                                    <button className="button-main" onClick={modalSet}>Close</button>
+                                <Textarea className={`${style.textArea} w-100 input-field`} name="briefPost" placeholder=" Brief post" /> <br />
+                                <InputField className="input-field" name="photo" type="file" />
+                                <div className="text-center mt-5">
+                                    <button className="button-main ms-2 me-2" type="submit">Submit</button>
+                                    <button className="button-main ms-2 me-2" onClick={modalSet}>Close</button>
                                 </div>
                             </Form>
                         </div>

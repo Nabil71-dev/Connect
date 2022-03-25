@@ -1,40 +1,19 @@
 .cardBg {
-  height: 550px;
   border-radius: 10px;
   position: absolute;
   top:9%;
   left: 9%;
 }
-.lMargin {
-  margin-left: 45px;
-}
-.bannerHead{
-  font-size: 3rem;
-}
-.bannerHead,.iconSize,.sidecard>h1{
-  color:#dddddd;
-  font-weight: 600;
-}
 .sidecard {
   background-image: url("../styles/assets/Login_Register_Side-bg.png");
   overflow: hidden;
   height: 550px;
-  text-align: center;
-}
-.sidecard>h1{
-  margin: 45% 0 5% 0;
-}
-.sidecard>p{
-  font-size: 1rem;
-  margin: 15% 0 5% 0;
-  color:#eeeeee;
 }
 .iconSize{
   font-size:2.5rem;
-  margin:0 20px 0 0;
   font-weight: 500;
 }
+
 .formCard{
-  margin-top: 10%;
-  text-align: center;
+  margin-top: 8%;
 }

@@ -28,7 +28,7 @@ const Dropdown = () => {
 
     return (
         <div ref={ref}>
-            <h3 className={`${style.dropPosition}`} onClick={openDropdown}><FontAwesomeIcon icon={faRectangleList} className={style.icon}/>Topic</h3>
+            <h3 className={`${style.dropPosition}`} onClick={openDropdown}><FontAwesomeIcon icon={faRectangleList} className="me-2"/>Topic</h3>
             {
                 active && <ul className={`${style.dropCard}`}>
                     {items.map((item) => (

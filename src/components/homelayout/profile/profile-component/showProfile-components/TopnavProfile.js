@@ -12,10 +12,10 @@ function TopnavProfile() {
 
             <div className="col-9 text-end">
                 <NavLink to="/home" className={`${style.Navbtn} me-4`}>
-                    <FontAwesomeIcon icon={faHouse} className={style.icon} />Home
+                    <FontAwesomeIcon icon={faHouse} className="me-2" />Home
                 </NavLink>
                 <NavLink to="/editProfile" className={`${style.Navbtn}`}>
-                    <FontAwesomeIcon icon={faUserEdit} className={style.icon} />Edit Profile
+                    <FontAwesomeIcon icon={faUserEdit} className="me-2" />Edit Profile
                 </NavLink>
             </div>
         </>

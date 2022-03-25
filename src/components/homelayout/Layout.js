@@ -1,24 +1,21 @@
 import SideNav from "./side_nav/SideNav";
-import style from '../../styles/navbar.module.css';
 import Topnav from "./top-nav/Topnav";
 import NotificationAside from "./trending-vacancy/NotifyAside";
 import AllPosts from './posts/AllPosts';
 
-const Layout = () => {
+const HomeLayout = () => {
     return (
         <div className="d-flex">
-            <div className={`${style.navContainer}`}>
+            <div className="w-25 me-1">
                 <SideNav />
             </div>
             <div className="container">
-                <div className="row">
-                    <div className="col-12 d-flex mt-4">
-                        <Topnav />
-                    </div>
-                    <div className="col-8 mt-4">
+                <div className="row mt-4">
+                    <Topnav />
+                    <div className="col-8 mt-3">
                         <AllPosts />
                     </div>
-                    <div className="col-4 mt-4">
+                    <div className="col-4 mt-3">
                         <NotificationAside />
                     </div>
                 </div>
@@ -26,4 +23,4 @@ const Layout = () => {
         </div>
     );
 };
-export default Layout;
+export default HomeLayout;

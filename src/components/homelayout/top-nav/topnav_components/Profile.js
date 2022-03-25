@@ -4,9 +4,9 @@ import style from "../../../../styles/topnav.module.css";
 
 function Profile() {
     return ( 
-        <div  className={`${style.profileContainer} alignCenter`}>
+        <div className="alignCenter">
             <h5 className="me-2">Nabil71-dev </h5>
-            <Link to="/profile"> <img src={profile_pic} alt="dummy profile pic"/> </Link>
+            <Link to="/profile"><img className={`${style.profileImg}`}  src={profile_pic} alt="dummy profile pic"/> </Link>
         </div>
      );
 }

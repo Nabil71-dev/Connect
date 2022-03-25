@@ -1,28 +1,11 @@
-.postContainer{
-  border-radius: 6px;
-  border: 1px solid rgba(255, 0, 0, 0);
-  margin:0 0 15px 0;
-}
-.postContainer>div{
-    margin:10px 0 5px 0;
-}
-.profilePic{
-    height:48px;
-    width:45px;
-    margin:0 10px 0 0;
-}
 .profile_name{
-    font-size: 1.15rem;
-    line-height: 20px;
+    font-size: 1.20rem;
 }
-.username{
-    margin:05px 0 0 0;
-    font-weight: 600;
-}
+
 .postContainer>div>article{
     font-size:1.05rem;
-    margin:7px 0 15px 0;
 }
+
 .showHide{
     color: rgba(202, 202, 202, 0.473);
     cursor: pointer;

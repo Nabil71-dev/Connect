@@ -7,13 +7,13 @@ function TrendingPost({ toppost, jobpost }) {
     return (
         <>
             {
-                toppost && <div className={`${style.toppostContainer} mt-4`}>
+                toppost && <div className="mt-4">
                     <h4>Trending Post</h4>
-                    <div className="d-flex">
+                    <div className="d-flex mt-3 mb-2">
                         <div className={`${style.list}`}></div>
                         <div className="d-flex">
-                            <div className={`${style.toppostDetails}`}>
-                                <h5>Im Publisher </h5>
+                            <div className="me-3">
+                                <h5 className="text-secondary">Im Publisher </h5>
                                 <h6>Post heading </h6>
                             </div>
                             <div className="alignCenter">
@@ -24,13 +24,13 @@ function TrendingPost({ toppost, jobpost }) {
                 </div>
             }
             {
-                jobpost && <div className={`${style.toppostContainer} mt-5`}>
+                jobpost && <div className="mt-4">
                     <h4>Recent Job</h4>
-                    <div className="d-flex">
+                    <div className="d-flex mt-3 mb-2">
                         <div className={`${style.list}`}></div>
                         <div className="d-flex">
-                            <div className={`${style.toppostDetails}`}>
-                                <h5>Publisher </h5>
+                            <div className="me-3">
+                                <h5 className="text-secondary">Publisher </h5>
                                 <h6>Job Post</h6>
                             </div>
                             <div className="alignCenter">

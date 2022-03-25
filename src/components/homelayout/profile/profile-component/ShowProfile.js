@@ -19,7 +19,6 @@ function Profile() {
                         <UserInfo />
                     </div>
                 </div>
-
             </div>
         </>
     );

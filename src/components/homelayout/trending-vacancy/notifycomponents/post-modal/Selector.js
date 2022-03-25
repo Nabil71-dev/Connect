@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Formik} from 'formik';
 import * as Yup from 'yup';
-import style from "../../../../../styles/notify.module.css"
 import { InputField } from "../../../../input-field/InputField";
 
 const options = ["Software", "Ai", "ML", "Distributed-system", "Job-Post"];
@@ -22,7 +21,7 @@ function Selector() {
             <Formik initialValues={{noOfVacancy: '' }} validationSchema={validate}>
                 {formik => (
                     <>
-                        <select onChange={selectorChange} className={`${style.inputwidth} input-field`} name="post" type="text" value={jobselect}>
+                        <select onChange={selectorChange} className="w-100 input-field" name="post" type="text" value={jobselect}>
                             {
                                 options.map((option) => <option key={Math.random() * 10} value={option}>{option}</option>)
                             }
@@ -30,7 +29,7 @@ function Selector() {
                         {
                             jobselect === 'Job-Post' &&
                             <>
-                                <InputField className={`${style.inputwidth} input-field mt-3`} name="noOfVacancy" type="text" placeholder=" Enter Number of vacancy" />
+                                <InputField className="w-100 input-field mt-3" name="noOfVacancy" type="text" placeholder=" Enter Number of vacancy" />
                             </>
                         }
                     </>

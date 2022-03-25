@@ -3,10 +3,14 @@ import Profile from "./topnav_components/Profile";
 
 function Topnav() {
     return (
-        <>
-            <SearchBar />
-            <Profile />
-        </>
+        <div className="row">
+            <div className="col-9">
+                <SearchBar />
+            </div>
+            <div className="col-3">
+                <Profile />
+            </div>
+        </div>
     );
 }
 export default Topnav;

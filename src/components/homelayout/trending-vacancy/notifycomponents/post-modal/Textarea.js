@@ -5,7 +5,7 @@ function Textarea({...props}) {
     return (
         <>
           <textarea {...props} {...field}/> <br />
-          <ErrorMessage component="small" name={field.name} className="error"/>
+          <ErrorMessage component="small" name={field.name} className="text-danger"/>
         </>
     );
 }

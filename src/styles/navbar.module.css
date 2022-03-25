@@ -1,21 +1,11 @@
 /* ---Navbtn is used from profile components ; must refactor it when concern-- */
 
-/* Side nav box model */
-.navContainer{
-  width:25.5%;
-}
-
 /* Side nav container style */
 .sideNavbg {
   position: fixed;
   width: 20%;
-  text-align: center;
 }
 /* Side nav Nav-button alignment */
-.align {
-  text-align: left;
-}
-
 .navLogo{
   margin:11% 0 30% 10%; 
 }
@@ -26,12 +16,6 @@
   list-style: none;
   margin:13% 0 0 0;
 }
-.navBtn>li>a,.dropCard>li>a,.Navbtn{
-  font-size: 1.6rem;
-  font-weight:600;
-  color:#BEBEBE;
-  text-decoration: none;
-}
 
 /* Dropdown menu pop up card style */
 .dropCard>li>a:hover,.Navbtn:hover{
@@ -39,8 +23,6 @@
 }
 .dropPosition{
   font-size: 1.6rem;
-  font-weight:600;
-  color:#BEBEBE;
   position: relative;
   cursor: pointer;
 }
@@ -65,20 +47,12 @@
    margin:2% 2% 5% 2%;
 }
 
-/* Style for icon margin */
-.icon{
-  margin:0 10px 0 0;
-}
-
 /* Logout button style */
 .logoutButton {
   background: #0d201c;
-  color: #bebebe;
-  font-weight: 700;
   width: 180px;
   height: 40px;
   border: none;
-  border-radius: 6px;
   margin:0 0 9% 0;
 }
 .logoutButton:hover{

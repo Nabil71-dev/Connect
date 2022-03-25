@@ -1,5 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRightToBracket } from '@fortawesome/free-solid-svg-icons'
+import { faGoogle} from '@fortawesome/free-brands-svg-icons';
+import { NavLink } from 'react-router-dom';
 
 import LoginForm from './log-reg_components/LoginForm';
 import SideCard from './log-reg_components/Side-Card';
@@ -10,18 +12,22 @@ const Login = () => {
     return (
         <div className={`${style.cardBg} container contentBg`}>
             <div className="row">
-                <div className={`${style.lMargin} col-7 mt-5`}>
+                <div className="mx-auto col-7 mt-5">
                     <img src={logo} alt="logo" />
-                    <div className={`${style.formCard}`}>
+                    <div className={`${style.formCard} text-center`}>
                         <div className="alignCenter mb-3">
-                            <FontAwesomeIcon icon={faArrowRightToBracket} className={`${style.iconSize}`} />
-                            <h1 className={`${style.bannerHead}`}>Sign in</h1>
+                            <FontAwesomeIcon icon={faArrowRightToBracket} className={`${style.iconSize} me-3`} />
+                            <h1 className="f-header">Sign in</h1>
                         </div>
-                        <LoginForm />
+                        <LoginForm/>
+                        <p className="mt-2">----------OR----------</p>
+                        <NavLink to=""> <button className="button-main">sign in with <FontAwesomeIcon icon={faGoogle}/></button></NavLink>
                     </div>
                 </div>
-                <div className={`${style.sidecard} col-4`}>
-                    <SideCard login={true} />
+                <div className={`${style.sidecard} text-center mx-auto alignCenter col-4`}>
+                    <div>
+                       <SideCard login={true} />
+                    </div>
                 </div>
             </div>
         </div>

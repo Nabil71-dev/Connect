@@ -7,7 +7,7 @@ const SideNav = () => {
     
 
     return (
-        <div className={`${style.sideNavbg} contentBg`}>
+        <div className={`${style.sideNavbg} contentBg text-center`}>
             <div>
                 <img src={logo} alt="logo" className={`${style.navLogo}`} />
             </div>

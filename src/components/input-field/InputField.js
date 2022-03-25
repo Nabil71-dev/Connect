@@ -5,7 +5,7 @@ export const InputField=({...props})=>{
     return(
         <>
             <input {...props} {...field}/> <br/>
-            <ErrorMessage component="small" name={field.name} className="error"/>
+            <ErrorMessage component="small" name={field.name} className="text-danger"/>
         </>
     )
 };

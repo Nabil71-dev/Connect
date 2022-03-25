@@ -7,7 +7,7 @@ import './styles/bootstrap.min.css';
 import './styles/global.css';
 import Login from './components/login_register/Login';
 import Registration from './components/login_register/Registration';
-import Layout from './components/homelayout/Layout';
+import HomeLayout from './components/homelayout/Layout';
 import ProfileLayout from './components/homelayout/profile/Profile_Layout';
 import EditProfile from './components/homelayout/profile/profile-component/EditProfile';
 
@@ -17,8 +17,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/home/*" element={<Layout />} />
         <Route path="/register" element={<Registration />} />
+        <Route path="/home/*" element={<HomeLayout />} />
         <Route path="/profile" element={<ProfileLayout />} />
         <Route path="/editProfile" element={<EditProfile />} />
       </Routes>

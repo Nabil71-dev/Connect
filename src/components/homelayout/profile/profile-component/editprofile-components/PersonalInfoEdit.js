@@ -10,10 +10,10 @@ function PersonalinfoEdit() {
           <input type="file" />
           <div className="mt-5">
               <h4>Personal info</h4>
-              <input className="input-field mt-2" type="text" placeholder=" Enter full name"/>
-              <input className="input-field mt-2" type="text" placeholder=" Enter username"/>
-              <input className="input-field mt-2" type="text" placeholder=" Enter email"/>
-              <input className="input-field mt-2" type="text" placeholder=" Enter personal website URL"/>
+              <input className="input-field w-100 mt-2" type="text" placeholder=" Enter full name"/>
+              <input className="input-field w-100 mt-2" type="text" placeholder=" Enter username"/>
+              <input className="input-field w-100 mt-2" type="text" placeholder=" Enter email"/>
+              <input className="input-field w-100 mt-2" type="text" placeholder=" Enter personal website URL"/>
           </div>
         </>
      );

@@ -1,22 +1,8 @@
-.searchContainer {
-  width: 75%;
-  border-radius: 5px;
-}
-.profileContainer {
-  width: 25%;
-}
 .searchContainer > input {
   width: 93.5%;
   height: 45px;
 }
-.searchContainer > button {
-  margin: 0 2% 0 1%;
-}
-.profileContainer > p {
-  margin: 0 3% 0 15%;
-}
-.profileContainer > img {
-  margin: 0 0 0 5%;
+.profileImg {
   width: 45px;
   height: 40px;
 }
