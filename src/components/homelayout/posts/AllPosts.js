@@ -1,12 +1,12 @@
 import {Routes,Route} from 'react-router-dom';
-import FootPrints from './job-footprints/FootPrints';
-import LookingJob from './job-footprints/JobNeed';
-import TopicPosts from './all-post/TopicPost';
-import JobPosts from './all-post/JobPost';
-import SoftwarePost from './all-post/SoftwarePost';
-import AI_ML_POST from './all-post/Ai_Ml';
-import DistributedSys from './all-post/DistSys';
-import OthersPost from './all-post/Others';
+import FootPrints from './user-card/UserFootPrints';
+import LookingJob from './user-card/JobNeededUsers';
+import TopicPosts from './topic-posts/Post';
+import JobPosts from './topic-posts/JobPost';
+import SoftwarePost from './topic-posts/SoftwarePost';
+import AI_ML_POST from './topic-posts/Ai_Ml';
+import DistributedSys from './topic-posts/DistSys';
+import OthersPost from './topic-posts/Others';
 
 function AllPosts() {
     return (

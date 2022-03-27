@@ -1,6 +1,6 @@
 import SideNav from "./side_nav/SideNav";
 import Topnav from "./top-nav/Topnav";
-import NotificationAside from "./trending-vacancy/NotifyAside";
+import TrendingPosts from "./trending-posts/TrendingPosts";
 import AllPosts from './posts/AllPosts';
 
 const HomeLayout = () => {
@@ -16,7 +16,7 @@ const HomeLayout = () => {
                         <AllPosts />
                     </div>
                     <div className="col-4 mt-3">
-                        <NotificationAside />
+                        <TrendingPosts />
                     </div>
                 </div>
             </div>

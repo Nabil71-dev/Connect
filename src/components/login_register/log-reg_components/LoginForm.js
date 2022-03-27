@@ -1,6 +1,6 @@
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
-import { InputField } from '../../input-field/InputField';
+import { InputField } from '../../shared-components/input-field/InputField';
 import { NavLink } from 'react-router-dom';
 
 const LoginForm = () => {

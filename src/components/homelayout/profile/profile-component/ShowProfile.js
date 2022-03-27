@@ -1,13 +1,13 @@
-import TopnavProfile from "./showProfile-components/TopnavProfile";
-import UserDetails from "./showProfile-components/UserDetails";
-import PostsShare from "./showProfile-components/UserPost_Share";
-import UserInfo from "./showProfile-components/UserInfo";
+import ProfileNav from "./show-profile-components/top-nav-profile/ProfileNav";
+import UserDetails from "./show-profile-components/user-personal-details/UserDetails";
+import PostsShare from "./show-profile-components/user-posts/User_allpost";
+import UserInfo from "./show-profile-components/user-personal-details/UserInfo";
 
 function Profile() {
     return (
         <>
             <div className="col-12 pt-3 alignCenter">
-                <TopnavProfile />
+                <ProfileNav />
             </div>
             <div className="container-fluid mt-5">
                 <div className="row">
