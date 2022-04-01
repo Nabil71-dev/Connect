@@ -10,7 +10,6 @@ const Popup= () => {
     const [active, setActive] = useState(false);
     const openPopup = () => {
         setActive(!active);
-        console.log(active);
     }
 
     //Click outside close feature

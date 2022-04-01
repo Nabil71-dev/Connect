@@ -4,6 +4,7 @@ import profile_pic from '../../../styles/assets/Profile_pic.png';
 import style from '../../../styles/comment.module.css';
 
 function Comments({ comment }) {
+    
     return (
         <>
             {

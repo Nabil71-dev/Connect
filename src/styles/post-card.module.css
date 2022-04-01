@@ -1,18 +1,41 @@
-.profile_name{
-    font-size: 1.20rem;
+.profile_name {
+  font-size: 1.2rem;
 }
 
-.postContainer>div>article{
-    font-size:1.05rem;
+.postContainer > div > article {
+  font-size: 1.05rem;
 }
 
-.showHide{
-    color: rgba(202, 202, 202, 0.473);
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 1.30rem;
+/* Show hide text in card  */
+.showHide {
+  color: rgba(202, 202, 202, 0.473);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.3rem;
 }
-.postImage{
-    height:200px;
-    overflow:hidden;
+.postImage {
+  height: 200px;
+  overflow: hidden;
+}
+
+/* Add comment button styles */
+.addComment{
+  border:none;
+  background: transparent;
+}
+
+/* Three dot menu for post card --styles */
+.dropPosition{
+  cursor: pointer;
+}
+.dropCard {
+  background: #061216;
+  right:10%;
+}
+.dropCard > li {
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+.dropCard > li:hover{
+  color:green;
 }
