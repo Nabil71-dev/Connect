@@ -3,7 +3,7 @@ import FootPrints from './user-card/UserFootPrints';
 import LookingJob from './user-card/JobNeededUsers';
 import TopicPosts from './topic-posts/Post';
 import JobPosts from './topic-posts/JobPost';
-import SoftwarePost from './topic-posts/SoftwarePost';
+import Software from './topic-posts/Software';
 import AI_ML_POST from './topic-posts/Ai_Ml';
 import DistributedSys from './topic-posts/DistSys';
 import OthersPost from './topic-posts/Others';
@@ -14,7 +14,7 @@ function AllPosts() {
             <Routes>
                 <Route path="/" element={<TopicPosts />} />
                 <Route path="/allposts" element={<TopicPosts />} />
-                <Route path="/Software" element={<SoftwarePost />} />
+                <Route path="/Software" element={<Software />} />
                 <Route path="/Ai-ML" element={<AI_ML_POST />} />
                 <Route path="/distributed-system" element={<DistributedSys />} />
                 <Route path="/Others" element={<OthersPost />} />

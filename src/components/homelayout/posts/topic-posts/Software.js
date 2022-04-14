@@ -3,24 +3,22 @@ import PostCard from "../../../shared-components/posts/PostCard";
 //import useTopicPost from '../../../../custom_hooks/topic_post/useTopicPost';
 
 const demoProps={
-    type:'Job-Post',
-    vacancy:4,
-    img:true,
-    header:"Job-Post"
+    type:'Software',
+    header:"Software"
 }
 
-function JobPosts() {
-    // const {state}=useTopicPost('jobpost');
+function Software() {
+    // const {state}=useTopicPost('software');
     // const{loading,error,post}=state;
     // if(post.length){
     //     console.log(post)
     // }
-
+    
     return (
         <>
-            <PostCard props={demoProps}/>
+          <PostCard props={demoProps}/>
         </>
     );
 }
 
-export default JobPosts;
+export default Software;
