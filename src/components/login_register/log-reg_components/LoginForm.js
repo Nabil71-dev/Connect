@@ -1,31 +1,31 @@
+//Comment part will be used after completing server
+
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import { InputField } from '../../shared-components/input-field/InputField';
 import { NavLink } from 'react-router-dom';
+//import { useAuth } from '../../../context/AuthContext';
 
 const LoginForm = () => {
-
-    //Submitted form data from login user
-    const loginData = (value) => {
-        console.log(value)
-    }
+    //const{login_w_email}=useAuth();
 
     const validate = Yup.object({
-        email: Yup.string().email('Invalid mail').required('Email Required'),
-        password: Yup.string().required('Password Required'),
+        user_email: Yup.string().email('Invalid mail').required('Email Required'),
+        user_password: Yup.string().required('Password Required'),
     });
 
     return (
         <>
-            <Formik initialValues={{ email: '', password: '' }} validationSchema={validate} onSubmit={values => {
-                loginData(values);
+            <Formik initialValues={{ user_email: '', user_password: '' }} validationSchema={validate} onSubmit={(value,{resetForm}) => {
+                resetForm({value:''})
+                //login_w_email(value)
             }} >
                 {formik => (
                     <Form>
-                        <InputField className="input-field w-75" name="email" type="text" placeholder=" Enter your mail" /> <br />
-                        <InputField className="input-field w-75" name="password" type="password" placeholder=" Enter your password" /> <br />
+                        <InputField className="input-field w-75" name="user_email" type="text" value={formik.values.user_email} placeholder=" Enter your mail" /> <br />
+                        <InputField className="input-field w-75" name="user_password" type="password" value={formik.values.user_password} placeholder=" Enter your password" /> <br />
                         {/* Dummy links to check routes */}
-                        <NavLink to="/home"> <button className="button-main" type="submit">Login</button></NavLink>
+                        <NavLink to="/home"><button className="button-main" type="submit">Login</button></NavLink>
                     </Form>
                 )}
             </Formik>

@@ -1,21 +1,25 @@
+//Comment part will be used after completing server
+
+import { useNavigate } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSignOut } from '@fortawesome/free-solid-svg-icons';
-import { useNavigate } from "react-router-dom";
 import style from '../../../../styles/navbar.module.css';
+//import { useAuth } from '../../../../context/AuthContext';
 
 const Logout = () => {
-    const navigate = useNavigate();
-    //Format all url and go to new one
-    const goBack = () => {
-        navigate("/", {
+    //const { logOut } = useAuth()
+
+    //dummy
+    const Navigate = useNavigate();
+    const logOut = () => {
+        Navigate("/", {
             replace: true
-        });
+        })
     }
 
     return (
         <>
-            {/* Just for dummy purpose go back feature*/}
-            <button onClick={goBack} className={`${style.logoutButton}`}>
+            <button onClick={logOut} className={`${style.logoutButton}`}>
                 <FontAwesomeIcon icon={faSignOut} /> Logout
             </button>
         </>

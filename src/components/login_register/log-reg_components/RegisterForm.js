@@ -1,13 +1,13 @@
+//Comment part will be used after completing server
+
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import { InputField } from '../../shared-components/input-field/InputField';
+//import { useAuth } from '../../../context/AuthContext';
 
 const RegisterForm = () => {
 
-    //Submitted form data from register user
-    const regData = (value) => {
-        console.log(value)
-    }
+    //const {reg_w_email}=useAuth();
 
     const validate = Yup.object({
         email: Yup.string().email('Invalid mail').required('Email Required'),
@@ -21,15 +21,21 @@ const RegisterForm = () => {
 
     return (
         <div>
-            <Formik initialValues={{ email: '', password: '', confirmpass: '' }} validationSchema={validate} onSubmit={values => {
-                regData(values);
+            <Formik initialValues={{ email: '', password: '', confirmpass: '' }} validationSchema={validate} onSubmit={(value,{resetForm}) => {
+                const data={
+                    email:value.email,
+                    password:value.password
+                }
+                resetForm({value:''})
+                console.log(data)
+                //reg_w_email(data)
             }}>
                 {formik => (
                     <div>
                         <Form>
-                            <InputField className="input-field w-75" name="email" type="text" placeholder=" Enter your mail" /> <br />
-                            <InputField className="input-field w-75" name="password" type="password" placeholder=" Enter your password" /> <br />
-                            <InputField className="input-field w-75" name="confirmpass" type="password" placeholder=" Confirm password" /> <br />
+                            <InputField className="input-field w-75" name="email" type="text" value={formik.values.email} placeholder=" Enter your mail" /> <br />
+                            <InputField className="input-field w-75" name="password" type="password" value={formik.values.password} placeholder=" Enter your password" /> <br />
+                            <InputField className="input-field w-75" name="confirmpass" type="password" value={formik.values.confirmpass} placeholder=" Confirm password" /> <br />
                             <button className="button-main" type="submit" >Register</button>
                         </Form>
                     </div>
