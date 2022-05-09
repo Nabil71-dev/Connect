@@ -3,11 +3,11 @@
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import { InputField } from '../../shared-components/input-field/InputField';
-//import { useAuth } from '../../../context/AuthContext';
+import { useAuth } from '../../../context/AuthContext';
 
 const RegisterForm = () => {
 
-    //const {reg_w_email}=useAuth();
+    const {reg_w_email}=useAuth();
 
     const validate = Yup.object({
         email: Yup.string().email('Invalid mail').required('Email Required'),
@@ -27,15 +27,15 @@ const RegisterForm = () => {
                     password:value.password
                 }
                 resetForm({value:''})
-                console.log(data)
-                //reg_w_email(data)
+                //console.log(data)
+                reg_w_email(data)
             }}>
                 {formik => (
                     <div>
                         <Form>
-                            <InputField className="input-field w-75" name="email" type="text" value={formik.values.email} placeholder=" Enter your mail" /> <br />
-                            <InputField className="input-field w-75" name="password" type="password" value={formik.values.password} placeholder=" Enter your password" /> <br />
-                            <InputField className="input-field w-75" name="confirmpass" type="password" value={formik.values.confirmpass} placeholder=" Confirm password" /> <br />
+                            <InputField className="form-control input-field w-100" name="email" type="text" value={formik.values.email} placeholder=" Enter your mail" /> <br />
+                            <InputField className="form-control input-field w-100" name="password" type="password" value={formik.values.password} placeholder=" Enter your password" /> <br />
+                            <InputField className="form-control input-field w-100" name="confirmpass" type="password" value={formik.values.confirmpass} placeholder=" Confirm password" /> <br />
                             <button className="button-main" type="submit" >Register</button>
                         </Form>
                     </div>

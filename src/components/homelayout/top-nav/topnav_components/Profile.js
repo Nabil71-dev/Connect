@@ -1,12 +1,20 @@
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import profile_pic from '../../../../styles/assets/Profile_pic.png';
 import style from "../../../../styles/topnav.module.css";
+import useProfile from '../../../../custom_hooks/profile_load/useProfile';
 
 function Profile() {
+    
+    const currentuser=sessionStorage.getItem('currentuser')
+    const { state } = useProfile(currentuser);
+    const { userprofile} = state;
+
     return ( 
         <div className="alignCenter">
-            <h5 className="me-2">Nabil71-dev </h5>
-            <Link to="/profile"><img className={`${style.profileImg}`}  src={profile_pic} alt="dummy profile pic"/> </Link>
+            {
+                userprofile.length>0 ? <h5 className="me-2">{userprofile[0].username}</h5>:<h5 className="me-2">Unknown</h5>
+            }
+            <NavLink to={`/profile/${currentuser}`}><img className={`${style.profileImg}`}  src={profile_pic} alt="dummy profile pic"/> </NavLink>
         </div>
      );
 }

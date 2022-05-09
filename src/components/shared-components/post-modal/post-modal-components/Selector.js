@@ -1,5 +1,4 @@
 import { useState } from 'react';
-// import { InputField } from "../../input-field/InputField";
 const options = ["Software", "Ai", "ML", "Distributed-system", "Job-Post"];
 
 function Selector() {
@@ -9,7 +8,7 @@ function Selector() {
     }
     return (
         <>
-            <select onChange={selectorChange} className="w-100 input-field mt-4" name="post" type="text" value={jobselect}>
+            <select onChange={selectorChange} className="w-100 input-field mt-4" name="post_topic" type="text" value={jobselect}>
                 {
                     options.map((option) => <option key={Math.random() * 10} value={option} name="post-type">{option}</option>)
                 }

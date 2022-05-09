@@ -2,7 +2,8 @@ import { useState } from 'react';
 import style from '../../../../styles/post-card.module.css';
 import PostModal from '../../post-modal/PostModal';
 
-function Threedot() {
+function Threedot({ props }) {
+//console.log(props)
     const [edit, toggleEdit] = useState(false);
     const [isOpen, setOpen] = useState(false);
     const handleEdit = () => {
@@ -16,8 +17,21 @@ function Threedot() {
         setOpen(false);
     }
 
-    const deleteData= () => {
-        alert("Still delete operation hasn't created");
+    const deleteData = () => {
+        //console.log(props)
+        fetch(`http://localhost:8080/post/deletepost`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                id:props
+            })
+        })
+            .then(response => response.json())
+            .then(result => {
+                alert(result.message)
+            })
     }
 
     return (

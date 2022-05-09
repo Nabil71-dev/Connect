@@ -11,7 +11,7 @@ import ProfileLayout from './components/homelayout/profile/Profile_Layout';
 import EditProfile from './components/homelayout/profile/profile-component/SetProfile';
 
 import { AuthProvider } from './context/AuthContext';
-//import RouteVerify from './route-access-verify/RouteVerify';
+import RouteVerify from './route-access-verify/RouteVerify';
 
 function App() {
   return (
@@ -21,14 +21,16 @@ function App() {
           <Route path="/" element={<Login />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Registration />} />
-          {/* <Route element={<RouteVerify />}>
+          <Route element={<RouteVerify />}>
             <Route path="/home/*" element={<HomeLayout />} />
             <Route path="/profile" element={<ProfileLayout />} />
+            <Route path="/profile/:mail" element={<ProfileLayout />} />
             <Route path="/editProfile" element={<EditProfile />} />
-          </Route> */}
-          <Route path="/home/*" element={<HomeLayout />} />
+          </Route>
+          {/* <Route path="/home/*" element={<HomeLayout />} />
           <Route path="/profile" element={<ProfileLayout />} />
-          <Route path="/editProfile" element={<EditProfile />} />
+          <Route path="/profile/:mail" element={<ProfileLayout />} />
+          <Route path="/editProfile" element={<EditProfile />} /> */}
         </Routes>
       </AuthProvider>
     </div>

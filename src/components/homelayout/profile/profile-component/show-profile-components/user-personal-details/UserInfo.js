@@ -2,7 +2,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin,faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faFile} from '@fortawesome/free-solid-svg-icons';
 
-function UserInfo() {
+function UserInfo({props}) {
+    
     return (
         <div className="mt-5">
             <div>
@@ -25,7 +26,7 @@ function UserInfo() {
             </div>
             <div className="mt-5">
               <h3>Looking for Job.?</h3>
-              <h5 className="ms-4">Active</h5>
+              <h5 className="ms-4 text-success">Active</h5>
             </div>
         </div>
     );

@@ -13,18 +13,36 @@ export function AuthProvider({ children }) {
     const Navigate = useNavigate();
 
     const [loading, setLoading] = useState(true);
-    const [currentuser, setCurrentser] = useState();
+    //const [currentuser, setCurrentuser] = useState();
 
     const provider = new GoogleAuthProvider();
     const auth = getAuth();
 
     useEffect(() => {
         const unsbscribe = onAuthStateChanged(auth, (user) => {
-            setCurrentser(user)
+            //setCurrentuser(user)
             setLoading(false);
         })
         return unsbscribe;
     }, [])
+
+    const authDataRedirect = (result) => {
+        fetch(`http://localhost:8080/email/gmaillogin`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.message === 'Authentication successfull') {
+                    sessionStorage.setItem('token', data.access_token)
+                    sessionStorage.setItem('currentuser', result._tokenResponse.email)
+                    Navigate("/home", {
+                        replace: true
+                    })
+                }
+                else{
+                    alert(data.message)
+                }
+
+            })
+    }
 
     const reg_w_email = (data) => {
         fetch(`http://localhost:8080/email/reg`, {
@@ -36,6 +54,7 @@ export function AuthProvider({ children }) {
         })
         .then(response => response.json())
         .then(response => {
+           
             if(response.message==='User created successfully'){
                 alert("User created successfully , Now you can login")
             }
@@ -56,11 +75,12 @@ export function AuthProvider({ children }) {
             .then(response => response.json())
             .then(result => {
                 if (result.message === 'Authentication successfull') {
-                    setCurrentser(data.user_email);
                     sessionStorage.setItem('token', result.access_token)
+                    sessionStorage.setItem('currentuser',data.user_email)
                     Navigate("/home", {
                         replace: true
                     })
+                    //setCurrentuser(data.user_email);
                 }
                 else {
                     alert(result.message)
@@ -71,29 +91,15 @@ export function AuthProvider({ children }) {
     const login_w_google = () => {
         signInWithPopup(auth, provider)
             .then((result) => {
-                authDataRedirect();
-                setCurrentser(result._tokenResponse.email);
+                authDataRedirect(result);
+                //console.log(result)
+                //setCurrentuser(result._tokenResponse.email);
             }).catch((error) => {
                 alert(error.message)
             });
     }
 
-    const authDataRedirect = () => {
-        fetch(`http://localhost:8080/email/gmaillogin`)
-            .then(response => response.json())
-            .then(data => {
-                if (data.message === 'Authentication successfull') {
-                    sessionStorage.setItem('token', data.access_token)
-                    Navigate("/home", {
-                        replace: true
-                    })
-                }
-                else{
-                    alert(data.message)
-                }
-
-            })
-    }
+    
 
     const logOut = () => {
         sessionStorage.clear();
@@ -103,7 +109,7 @@ export function AuthProvider({ children }) {
     }
 
     const value = {
-        currentuser,
+        //currentuser,
         login_w_google,
         reg_w_email,
         login_w_email,

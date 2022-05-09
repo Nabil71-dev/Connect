@@ -1,10 +1,9 @@
-//Custom hook to fecth all posts
+//Custom hook to fecth all users
 import { useEffect, useReducer } from 'react';
-
 const initialstate = {
     loading: true,
     error: '',
-    post: {}
+    userpost: {}
 }
 
 const reducer = (state, action) => {
@@ -12,13 +11,13 @@ const reducer = (state, action) => {
         case 'SUCCESS':
             return {
                 loading: false,
-                post: action.result,
+                userpost: action.result,
                 error: ''
             }
         case 'ERROR':
             return {
                 loading: false,
-                post: {},
+                userpost: {},
                 error: 'There is some problem'
             }
         default:
@@ -26,26 +25,32 @@ const reducer = (state, action) => {
     }
 }
 
-function usePost() {
+function useUserpost(currentuserpost) { 
     const [state, dispatch] = useReducer(reducer, initialstate)
 
+    const value={
+        email:currentuserpost
+    }
     useEffect(() => {
-        async function fetchpost() {
-            const response = await fetch('http://localhost:8080/post');
-            const data = await response.json();
-            return data;
-        }
-        try {
-            fetchpost().then(data => {
+        fetch(`http://localhost:8080/post/userspost`, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(value)
+        })
+        .then(response => response.json())
+        .then(data => {
                 dispatch({ type: 'SUCCESS', result: data })
-            });
-        }
-        catch {
+                //console.log(data)
+        })
+         .catch(() => {
             dispatch({ type: 'ERROR' })
-        }
-    }, [])
+        })
+    },[currentuserpost]);
+
     return {
         state
     };
 }
-export default usePost;
+export default useUserpost;
