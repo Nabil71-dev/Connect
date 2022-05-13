@@ -33,7 +33,6 @@ function useUser(job_title) {
             .then(response => response.json())
             .then(data => {
                 dispatch({ type: 'SUCCESS', result: data })
-                console.log(data)
             })
             .catch(() => {
                 dispatch({ type: 'ERROR' })

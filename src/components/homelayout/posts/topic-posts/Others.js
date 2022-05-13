@@ -1,19 +1,9 @@
-//Comment part is just for data load from server
 import PostCard from "../../../shared-components/posts/PostCard";
 import useTopicPost from '../../../../custom_hooks/topic_post/useTopicPost';
-
-// const demoProps={
-//     mail:'grn',
-//     type:'Others',
-//     header:"Others"
-// }
 
 function OthersPost() {
     const {state}=useTopicPost('others');
     const{loading,error,post}=state;
-    // if(post.length){
-    //     console.log(post)
-    // }
 
     return ( 
         <>
@@ -29,7 +19,6 @@ function OthersPost() {
         {
             error && <h3 className="text-center">{error}</h3>
         }
-          {/* <PostCard props={demoProps}/> */}
         </>
      );
 }

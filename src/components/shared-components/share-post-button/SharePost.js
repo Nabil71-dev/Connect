@@ -21,7 +21,7 @@ function SharePost() {
             </div>
             <h4>Share your thoughts / Job Post</h4>
             {
-                isOpen && <PostModal isOpen={isOpen} closeModal={closeModal} />
+                isOpen && <PostModal type="insert" isOpen={isOpen} closeModal={closeModal} />
             }
         </div>
     );

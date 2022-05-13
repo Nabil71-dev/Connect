@@ -1,5 +1,6 @@
-import Modal from 'react-modal';
-import Modalform from './post-modal-components/ModalForm';
+import Modal from 'react-modal'
+import Modalform from './post-modal-components/ModalForm'
+import EditModal from './edit-modal-components/EditModal'
 
 //Modal styles
 const customStyles = {
@@ -17,15 +18,19 @@ const customStyles = {
         background: 'rgba(13, 32, 28, 0)',
         border: 'none',
     },
-};
+}
+
 Modal.setAppElement('#root');
 
-function PostModal({ isOpen, closeModal }) {
-
+function PostModal({ isOpen, closeModal,type }) {
     return (
         <>
             <Modal isOpen={isOpen} onRequestClose={closeModal} style={customStyles} contentLabel="Example Modal">
-                <Modalform closeModal={closeModal}/>
+                {
+                     type==='insert' ? <Modalform closeModal={closeModal}/> : <EditModal id={type} closeModal={closeModal}/>
+                }
+                <hr />
+                <strong className="text-danger">Be careful while uploading picture, you wont get chance to edit post pic, so if upload wrong one change it before posting this one</strong>
             </Modal>
         </>
     );

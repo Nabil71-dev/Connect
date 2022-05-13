@@ -27,10 +27,6 @@ function App() {
             <Route path="/profile/:mail" element={<ProfileLayout />} />
             <Route path="/editProfile" element={<EditProfile />} />
           </Route>
-          {/* <Route path="/home/*" element={<HomeLayout />} />
-          <Route path="/profile" element={<ProfileLayout />} />
-          <Route path="/profile/:mail" element={<ProfileLayout />} />
-          <Route path="/editProfile" element={<EditProfile />} /> */}
         </Routes>
       </AuthProvider>
     </div>

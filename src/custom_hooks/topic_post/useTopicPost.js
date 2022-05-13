@@ -39,13 +39,13 @@ function useTopicPost(topic) {
         try {
             fetchpost().then(data => {
                 dispatch({ type: 'SUCCESS', result: data })
-                console.log(data)
             });
         }
         catch {
             dispatch({ type: 'ERROR' })
         }
     }, [topic])
+    
     return {
         state
     };
