@@ -1,11 +1,18 @@
-//Comment part will be used after completing server
-
+import {useState} from 'react';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import { InputField } from '../../shared-components/input-field/InputField';
 import { useAuth } from '../../../context/AuthContext';
 
 const RegisterForm = () => {
+    const [passwordShown, setPasswordShown] = useState(false);
+    const [conpasswordShown, setConPasswordShown] = useState(false);
+    const showhidepass = () => {
+        setPasswordShown(!passwordShown);
+    };
+    const showhideconpass = () => {
+        setConPasswordShown(!conpasswordShown);
+    };
 
     const {reg_w_email}=useAuth();
 
@@ -32,10 +39,10 @@ const RegisterForm = () => {
             }}>
                 {formik => (
                     <div>
-                        <Form>
-                            <InputField className="form-control input-field w-100" name="email" type="text" value={formik.values.email} placeholder=" Enter your mail" /> <br />
-                            <InputField className="form-control input-field w-100" name="password" type="password" value={formik.values.password} placeholder=" Enter your password" /> <br />
-                            <InputField className="form-control input-field w-100" name="confirmpass" type="password" value={formik.values.confirmpass} placeholder=" Confirm password" /> <br />
+                        <Form className="px-5">
+                            <InputField name="email" type="text" value={formik.values.email} placeholder=" Enter your mail" /> <br />
+                            <InputField name="password"  type={passwordShown ? "text" : "password"} value={formik.values.password} placeholder=" Enter your password" showhidepass={showhidepass}/> <br />
+                            <InputField name="confirmpass"  type={conpasswordShown ? "text" : "password"} value={formik.values.confirmpass} placeholder=" Confirm password" showhidepass={showhideconpass}/> <br />
                             <button className="button-main" type="submit" >Register</button>
                         </Form>
                     </div>

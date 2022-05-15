@@ -13,7 +13,7 @@ const Registration = () => {
                 <div className="mx-auto col-7 mt-5">
                     <img src={logo} alt="logo" />
                     <div className={`${style.formCard} text-center`}>
-                        <div className="alignCenter mb-3">
+                        <div className="alignCenter mb-2">
                             <FontAwesomeIcon icon={faUserPlus} className={`${style.iconSize} me-3`}/>
                             <h1 className="f-header">Sign Up</h1>
                         </div>

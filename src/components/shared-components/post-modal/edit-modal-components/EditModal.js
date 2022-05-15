@@ -48,10 +48,15 @@ function Modalform({ closeModal, id }) {
     return (
         <>
             <form onSubmit={EditPost}>
-                <input className="w-100 input-field" name="post_header" type="text" placeholder=" Enter post title" value={header ?? ""} onChange={(e) => setHeader(e.target.value)} required /> <br />
+                <div className="form__group field">
+                    <input className="form__field w-100" name="post_header" type="text" placeholder=" Enter post title" value={header ?? ""} onChange={(e) => setHeader(e.target.value)} required />
+                    <label htmlFor="post_header" className="form__label"> Enter post title</label>
+                </div>
                 <Selector /> <br />
-                <textarea className={`${style.textArea} w-100 input-field mb-3`} name="post" placeholder=" Brief post" value={post ?? ""} onChange={(e) => setPost(e.target.value)} required /> <br />
-                {/* <input className="input-field" name="post_pic" type="file" value={file ?? ""} onChange={handlePicChange}/> */}
+                <div className="form__group field">
+                    <textarea className={`${style.textArea} form__field w-100`} name="post" placeholder=" Brief post" value={post ?? ""} onChange={(e) => setPost(e.target.value)} required />
+                    <label htmlFor="post" className="form__label"> Brief post</label>
+                </div>
                 <div className="text-center mt-5">
                     <button className="button-main ms-2 me-2" type="submit">Submit</button>
                     <button className="button-main ms-2 me-2" onClick={closeModal}>Close</button>

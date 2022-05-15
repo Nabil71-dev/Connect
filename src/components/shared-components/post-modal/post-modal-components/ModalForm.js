@@ -70,16 +70,24 @@ function Modalform({ closeModal }) {
     }, [formdata])
 
     return (
-            <form onSubmit={postData}>
-                <input className="w-100 input-field" name="post_header" type="text" placeholder=" Enter post title" required /> <br />
-                <Selector /> <br />
-                <textarea className={`${style.textArea} w-100 input-field mb-3`} name="post" placeholder=" Brief post" required /> <br />
-                <input onChange={handlePicChange} className="input-field" name="post_pic" type="file" />
-                <div className="text-center mt-5">
-                    <button className="button-main ms-2 me-2" type="submit">Submit</button>
-                    <button className="button-main ms-2 me-2" onClick={closeModal}>Close</button>
-                </div>
-            </form>
+        <form onSubmit={postData}>
+            <div className="form__group field">
+                <input className="form__field w-100" name="post_header" type="text" placeholder=" Enter post title" required />
+                <label htmlFor="post_header" className="form__label"> Enter post title</label>
+            </div>
+            <Selector /> <br />
+            <div className="form__group field">
+                <textarea className={`${style.textArea} form__field w-100`} name="post" placeholder=" Brief post" required />
+                <label htmlFor="post" className="form__label"> Brief post</label>
+            </div>
+            <div className="form__group field">
+                <input onChange={handlePicChange} className="form__field" name="post_pic" type="file" />
+            </div>
+            <div className="text-center mt-5">
+                <button className="button-main ms-2 me-2" type="submit">Submit</button>
+                <button className="button-main ms-2 me-2" onClick={closeModal}>Close</button>
+            </div>
+        </form>
     );
 }
 

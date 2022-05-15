@@ -1,6 +1,7 @@
 .searchContainer > input {
   width: 93.5%;
   height: 45px;
+  outline:0;
 }
 .profileImg {
   width: 45px;

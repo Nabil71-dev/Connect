@@ -8,16 +8,19 @@ function Selector() {
     }
     return (
         <>
-            <select onChange={selectorChange} className="w-100 input-field mt-4" name="post_topic" type="text" value={jobselect}>
-                {
-                    options.map((option) => <option key={Math.random() * 10} value={option} name="post-type">{option}</option>)
-                }
-            </select> <br />
+            <div className="form__group field">
+                <select onChange={selectorChange} className="form__field w-100" name="post_topic" type="text" value={jobselect}>
+                    {
+                        options.map((option) => <option className="text-dark" key={Math.random() * 10} value={option} name="post-type">{option}</option>)
+                    }
+                </select>
+            </div>
             {
                 jobselect === 'Job-Post' &&
-                <>
-                    <input className="w-100 input-field mt-3 mb-4" name="no-of-vacancy" type="text" placeholder=" Enter Number of vacancy" />
-                </>
+                <div className="form__group field">
+                    <input className="form__field w-100" name="no-of-vacancy" type="text" placeholder=" Enter Number of vacancy" />
+                    <label htmlFor="no-of-vacancy" className="form__label"> Enter Number of vacancy</label>
+                </div>
             }
         </>
     );

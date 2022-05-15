@@ -33,15 +33,11 @@ button{
   justify-content: center;
 }
 
-/* Input filed and buttons default style */
-.input-field,.button-main {
+/* buttons default style */
+.button-main {
   border: 2px solid #538b84;
   border-radius: 6px;
   color: #d1d1d1;
-}
-.input-field{
-  background: #0d201c;
-  height:40px;
 }
 .button-main {
   background: #305a53;
@@ -92,4 +88,54 @@ height:12px;
 .post-userpic{
     height:42px;
     width:37px;
+}
+
+/*---------Input style-------------*/
+.form__group {
+  position: relative;
+  padding: 14px 0 0 0;
+  width: 95%;
+}
+.form__field {
+  border: 0;
+  border-bottom: 2px solid #538b84;
+  outline: 0;
+  color: #fff;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+.form__field::placeholder {
+  color: transparent;
+}
+.form__field:placeholder-shown ~ .form__label {
+  font-size: 1.1rem;
+  cursor: text;
+  top: 20px;
+}
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  color: #9b9b9b;
+}
+.form__field:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #11998e, #037d48);
+  border-image-slice: 1;
+}
+.form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #efefef;
+}
+/* reset input */
+.form__field:required, .form__field:invalid {
+  box-shadow: none;
 }

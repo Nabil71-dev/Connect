@@ -1,7 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRightToBracket } from '@fortawesome/free-solid-svg-icons'
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
-import { NavLink } from 'react-router-dom';
 
 import LoginForm from './log-reg_components/LoginForm';
 import SideCard from './log-reg_components/Side-Card';
@@ -18,13 +17,13 @@ const Login = () => {
                 <div className="mx-auto col-7 mt-5">
                     <img src={logo} alt="logo" />
                     <div className={`${style.formCard} text-center`}>
-                        <div className="alignCenter mb-3">
+                        <div className="alignCenter mb-2">
                             <FontAwesomeIcon icon={faArrowRightToBracket} className={`${style.iconSize} me-3`} />
                             <h1 className="f-header">Sign in</h1>
                         </div>
                         <LoginForm />
-                        <p className="mt-2">----------OR----------</p>
-                        <NavLink to=""> <button onClick={login_w_google} className="button-main">sign in with <FontAwesomeIcon icon={faGoogle} /></button></NavLink>
+                        <p className="mt-2"><em>----------or----------</em></p>
+                        <button onClick={login_w_google} className="button-main">sign in with <FontAwesomeIcon icon={faGoogle} /></button>
                     </div>
                 </div>
                 <div className={`${style.sidecard} text-center mx-auto alignCenter col-4`}>
