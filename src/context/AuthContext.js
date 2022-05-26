@@ -92,7 +92,6 @@ export function AuthProvider({ children }) {
         signInWithPopup(auth, provider)
             .then((result) => {
                 authDataRedirect(result);
-                //console.log(result)
                 //setCurrentuser(result._tokenResponse.email);
             }).catch((error) => {
                 alert(error.message)

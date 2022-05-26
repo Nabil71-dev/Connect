@@ -3,6 +3,9 @@ import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import { InputField } from '../../shared-components/input-field/InputField';
 import { useAuth } from '../../../context/AuthContext';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSignIn } from '@fortawesome/free-solid-svg-icons'
+
 
 const LoginForm = () => {
     const { login_w_email } = useAuth();
@@ -28,7 +31,7 @@ const LoginForm = () => {
                     <Form className="px-5">
                         <InputField name="user_email" type="text" value={formik.values.user_email} placeholder=" Enter your mail" /><br />
                         <InputField name="user_password" type={passwordshown ? "text" : "password"}  value={formik.values.user_password} placeholder=" Enter your password" showhidepass={showhidepass}/> <br />
-                        <button className="button-main" type="submit">Login</button>
+                        <button className="button-main" type="submit"><FontAwesomeIcon icon={faSignIn} /> Login</button>
                     </Form>
                 )}
             </Formik>

@@ -6,8 +6,6 @@ import style from "../../../../styles/trending_post.module.css"
 function Modalform({ closeModal }) {
 
     const [file, setFile] = useState(null);
-    const [formimg, setFromimg] = useState({});
-    const [formdata, setFromdata] = useState({});
 
     const handlePicChange = (e) => {
         const info = e.target.files[0];
@@ -21,6 +19,7 @@ function Modalform({ closeModal }) {
         if (file !== null) {
             const formData = new FormData(e.target)
             const data = Object.fromEntries(formData.entries())
+
             formData.append('file', file);
             formData.append('post_header', data.post_header);
             formData.append('post_topic', data.post_topic);
@@ -29,45 +28,39 @@ function Modalform({ closeModal }) {
             formData.append('date', date.toLocaleString());
             formData.append('id', uuidv4());
 
-            setFromimg(formData)
+            fetch(`http://localhost:8080/post/addpostimg`, {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => response.json())
+                .then(result => {
+                    alert(result.message)
+                    closeModal();
+                })
         }
         else {
             const formData = new FormData(e.target)
             const data = Object.fromEntries(formData.entries())
-            formData.append('post_header', data.post_header);
-            formData.append('post_topic', data.post_topic);
-            formData.append('post', data.post);
-            formData.append('usermail', sessionStorage.getItem('currentuser'));
-            formData.append('date', date.toLocaleString());
-            formData.append('id', uuidv4());
+            delete data.post_pic;
 
-            setFromdata(formData)
+            data.usermail = sessionStorage.getItem('currentuser')
+            data.date = date.toLocaleString()
+            data.id = uuidv4()
+
+            fetch(`http://localhost:8080/post/addpostnoimg`, {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+                .then(response => response.json())
+                .then(result => {
+                    alert(result.message)
+                    closeModal();
+                })
         }
     }
-
-    useEffect(() => {
-        fetch(`http://localhost:8080/post/addpostimg`, {
-            method: 'POST',
-            body: formimg
-        })
-            .then(response => response.json())
-            .then(result => {
-                alert(result.message)
-                closeModal();
-            })
-    }, [formimg])
-
-    useEffect(() => {
-        fetch(`http://localhost:8080/post/addpostnoimg`, {
-            method: 'POST',
-            body: formdata
-        })
-            .then(response => response.json())
-            .then(result => {
-                alert(result.message)
-                closeModal();
-            })
-    }, [formdata])
 
     return (
         <form onSubmit={postData}>

@@ -4,12 +4,9 @@ import style from "../../../../styles/trending_post.module.css"
 
 
 function Modalform({ closeModal, id }) {
-
-    //const [formimg, setFromimg] = useState({});
-    const [formvalue, setFromvalue] = useState({});
+    
     const [header, setHeader] = useState();
     const [post, setPost] = useState();
-
 
     const EditPost = (e) => {
         e.preventDefault();
@@ -17,33 +14,28 @@ function Modalform({ closeModal, id }) {
         const form_Data = new FormData(e.target)
         const data = Object.fromEntries(form_Data.entries())
 
-        form_Data.append('post_header', data.post_header);
-        form_Data.append('post_topic', data.post_topic);
-        form_Data.append('post', data.post);
-
-        setFromvalue(form_Data)
-    }
-
-    useEffect(() => {
-        fetch(`http://localhost:8080/post/editpost/${id}`)
-            .then(response => response.json())
-            .then(result => {
-                setHeader(result.post_header)
-                setPost(result.post)
-            })
-    }, [id])
-
-    useEffect(() => {
         fetch(`http://localhost:8080/post/updatepost/${id}`, {
             method: 'POST',
-            body: formvalue
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(data)
         })
             .then(response => response.json())
             .then(result => {
                 alert(result.message)
                 closeModal();
             })
-    }, [formvalue])
+    }
+
+    useEffect(() => {
+        fetch(`http://localhost:8080/post/editpost/${id}`)
+            .then(response => response.json())
+            .then(result => {
+                setHeader(result.result[0].post_header)
+                setPost(result.result[0].post)
+            })
+    }, [id])
 
     return (
         <>

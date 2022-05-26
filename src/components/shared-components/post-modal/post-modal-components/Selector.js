@@ -1,5 +1,5 @@
 import { useState } from 'react';
-const options = ["Software", "Ai", "ML", "Distributed-system", "Job-Post"];
+const options = ["Software", "Ai-ML", "Distributed-system", "Job-Post","Others"];
 
 function Selector() {
     const [jobselect, setJobselect] = useState("");
@@ -18,8 +18,8 @@ function Selector() {
             {
                 jobselect === 'Job-Post' &&
                 <div className="form__group field">
-                    <input className="form__field w-100" name="no-of-vacancy" type="text" placeholder=" Enter Number of vacancy" />
-                    <label htmlFor="no-of-vacancy" className="form__label"> Enter Number of vacancy</label>
+                    <input className="form__field w-100" name="no_of_vacancy" type="text" placeholder=" Enter Number of vacancy" />
+                    <label htmlFor="no_of_vacancy" className="form__label"> Enter Number of vacancy</label>
                 </div>
             }
         </>

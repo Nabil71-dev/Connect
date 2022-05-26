@@ -9,14 +9,12 @@ import Article from '../post-show-hide/PostDescription';
 import Threedot from './card-comp/ThreeDotNav';
 
 function PostCard({ props }) {
-
     const currentuser = sessionStorage.getItem('currentuser')
     // const [comment, toggleComment] = useState(false)
     // const handleComment = () => {
     //     toggleComment(!comment);
     // }
     const { id,usermail, username, date, post_topic, no_of_vacancy, post_header, post, image } = props
-
     return (
         <>
             <div className="cardContainer contentBg container">
@@ -50,7 +48,7 @@ function PostCard({ props }) {
                     }
                     <Article text={post} />
                     {
-                        image && <img src={`data:image/png;base64,${image.img}`} alt="Post_image-if-uploaded" className={`${style.postImage}`} />
+                        image && <img src={`data:image/png;base64,${image?.img?.data}`} alt="Post_image" className={`${style.postImage}`} />
                     }
                 </div>
                 <div className="mt-3 mb-3">

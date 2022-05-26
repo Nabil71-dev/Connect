@@ -3,8 +3,7 @@ import pic from '../../../../../../styles/assets/Picture.svg';
 
 function UserDetails({props}) {
     
-    const {username}=props[0]
-
+    const {username}=props
     return (
         <div className="text-center">
             <div className="d-flex contentBg">

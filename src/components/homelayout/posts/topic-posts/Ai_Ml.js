@@ -11,10 +11,10 @@ function AI_ML_POST() {
             loading && <h3 className="text-center">Loading...</h3>
         }
         {
-            post.length>0 && post.map(data => <PostCard key={data._id} props={data}/>)
+            post.result && post.result.map(data => <PostCard key={data._id} props={data}/>)
         }
         {
-            !loading && post.length===0 && <div>No data found</div>
+            !loading && post.message && <h3 className="text-center">No data found</h3>
         }
         {
             error && <h3 className="text-center">{error}</h3>

@@ -8,11 +8,10 @@ function Profile() {
     const currentuser=sessionStorage.getItem('currentuser')
     const { state } = useProfile(currentuser);
     const { userprofile} = state;
-
     return ( 
         <div className="alignCenter">
             {
-                userprofile.length>0 ? <h5 className="me-2">{userprofile[0].username}</h5>:<h5 className="me-2">Unknown</h5>
+                userprofile.result ? <h5 className="me-2">{userprofile.result[0].username}</h5>:<h5 className="me-2">Unknown</h5>
             }
             <NavLink to={`/profile/${currentuser}`}><img className={`${style.profileImg}`}  src={profile_pic} alt="dummy profile pic"/> </NavLink>
         </div>

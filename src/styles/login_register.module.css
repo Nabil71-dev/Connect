@@ -17,3 +17,24 @@
 .formCard{
   margin-top: 8%;
 }
+.formCard>p {
+  font-weight: 600;
+  text-align: center;
+  position: relative;
+}
+.formCard>p:before ,.formCard>p:after{
+  content: "";
+  display: block;
+  width: 295px;
+  height: 5px;
+  background: #167658;
+  top: 50%;
+}
+.formCard>p:before {
+  left: 0;
+  position: absolute;
+}
+.formCard>p:after {
+  right: 0;
+  position: absolute;
+}

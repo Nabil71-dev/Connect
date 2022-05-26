@@ -31,7 +31,7 @@ function useProfile(value) {
         email:value
     }
     useEffect(() => {
-        fetch(`http://localhost:8080/user/userprofie`, {
+        fetch(`http://localhost:8080/user/userprofile/${value}`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -41,7 +41,6 @@ function useProfile(value) {
         .then(response => response.json())
         .then(data => {
                 dispatch({ type: 'SUCCESS', result: data })
-                //console.log(data)
         })
          .catch(() => {
             dispatch({ type: 'ERROR' })

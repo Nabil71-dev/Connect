@@ -22,19 +22,17 @@ function Profile() {
                         <PostsShare />
                     </div>
                     <div className="col-3">
-                        {/* <UserDetails /> */}
-                        {/* <UserInfo /> */}
                         {
                             loading && <h3 className="text-center">Loading...</h3>
                         }
                         {
-                            userprofile.length > 0 && <>
-                             <UserDetails props={userprofile} />
-                             <UserInfo props={userprofile}/>
+                            userprofile.result  && <>
+                             <UserDetails props={userprofile.result[0]} />
+                             <UserInfo props={userprofile.result[0]}/>
                             </>
                         }
                         {
-                            !loading && userprofile.length === 0 && <div>No data found</div>
+                            !loading && userprofile.message && <div>No data found</div>
                         }
                         {
                             error && <h3 className="text-center">{error}</h3>

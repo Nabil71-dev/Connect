@@ -25,7 +25,7 @@ const Navbutton = () => {
                     <FontAwesomeIcon icon={faUnlock} className="me-2" />Open</NavLink>
                 </li>
                 <li><NavLink className={({ isActive }) => (isActive ? "text-success" : '')} to="/messanger">
-                    <FontAwesomeIcon icon={faFacebookMessenger} className="me-2" />Messenger</NavLink>
+                    <FontAwesomeIcon icon={faFacebookMessenger} className="me-2" />Chat</NavLink>
                 </li>
             </ul>
         </div>

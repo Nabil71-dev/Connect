@@ -22,8 +22,8 @@ const Login = () => {
                             <h1 className="f-header">Sign in</h1>
                         </div>
                         <LoginForm />
-                        <p className="mt-2"><em>----------or----------</em></p>
-                        <button onClick={login_w_google} className="button-main">sign in with <FontAwesomeIcon icon={faGoogle} /></button>
+                        {/* <p className="mt-2">OR</p> */}
+                        <button onClick={login_w_google} className="button-main mt-3"><FontAwesomeIcon icon={faGoogle} /> Sign in</button>
                     </div>
                 </div>
                 <div className={`${style.sidecard} text-center mx-auto alignCenter col-4`}>
