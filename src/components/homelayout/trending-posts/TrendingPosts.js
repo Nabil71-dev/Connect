@@ -6,7 +6,7 @@ function TrendingPosts() {
     return (
         <>
             <SharePost />
-            <TopPosts />
+            <TopPosts /> <br />
             <RecentJobs />
         </>
     );

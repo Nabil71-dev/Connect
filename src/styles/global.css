@@ -2,32 +2,38 @@
 .main-bg {
   background: #061216;
   min-height: 100vh;
-  color:#d8d8d8;
+  color: #d8d8d8;
   font-size: 18px;
   scroll-behavior: smooth;
 }
 
 /* Common font weight for whole site */
-h1,h2,h3,h4,h5,h6,a{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
   font-weight: 600;
-  color:#BEBEBE;
+  color: #bebebe;
 }
-a{
+a {
   font-size: 1.6rem;
-  color:#BEBEBE;
+  color: #bebebe;
   text-decoration: none;
 }
-a:hover{
-  color:#BEBEBE;
+a:hover {
+  color: #bebebe;
 }
-button{
+button {
   font-size: 1.15rem;
   font-weight: 700;
   color: #bebebe;
   border-radius: 6px;
 }
 /* Alignment for the whole site : use if any time needed */
-.alignCenter{
+.alignCenter {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,52 +48,49 @@ button{
 .button-main {
   background: #305a53;
   font-weight: 700;
-  width:150px;
-  height:40px;
+  width: 150px;
+  height: 40px;
 }
 .button-main:hover {
   background: #0d201c;
   color: #bebebe;
 }
 
-
 /* some fonts height */
-.h-12{
-height:12px;
+.h-12 {
+  height: 12px;
 }
 
 /* Content/cards default color  */
-.contentBg{
+.contentBg {
   background: #305a538a;
 }
-.f-header{
+.f-header {
   font-size: 3rem;
 }
-.p-text{
+.p-text {
   font-size: 1rem;
-  color:#c3c3c3;
+  color: #c3c3c3;
 }
-
 
 /* for transparent background */
-.bg-transparent{
+.bg-transparent {
   background: transparent;
-  border:none;
-  color:#d1d1d1;
+  border: none;
+  color: #d1d1d1;
 }
 
-
 /* Card continer */
-.cardContainer{
+.cardContainer {
   border-radius: 6px;
   border: 1px solid rgba(255, 0, 0, 0);
-  margin:0 0 15px 0;
+  margin: 0 0 15px 0;
 }
 
 /*Post useric */
-.post-userpic{
-    height:42px;
-    width:37px;
+.post-userpic {
+  height: 42px;
+  width: 37px;
 }
 
 /*---------Input style-------------*/
@@ -136,6 +139,7 @@ height:12px;
   color: #efefef;
 }
 /* reset input */
-.form__field:required, .form__field:invalid {
+.form__field:required,
+.form__field:invalid {
   box-shadow: none;
 }

@@ -1,12 +1,13 @@
 //import { useState } from 'react';
-import { NavLink} from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart, faCommenting } from '@fortawesome/free-regular-svg-icons';
+//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+//import { faCommenting } from '@fortawesome/free-regular-svg-icons';
+//import Comments from '../comment/Comments';
+import { NavLink } from 'react-router-dom';
 import profile_pic from '../../../styles/assets/Profile_pic.png';
 import style from '../../../styles/post-card.module.css';
 import Article from '../post-show-hide/PostDescription';
-//import Comments from '../comment/Comments';
 import Threedot from './card-comp/ThreeDotNav';
+import PostReact from '../post_react/PostReact';
 
 function PostCard({ props }) {
     const currentuser = sessionStorage.getItem('currentuser')
@@ -14,7 +15,8 @@ function PostCard({ props }) {
     // const handleComment = () => {
     //     toggleComment(!comment);
     // }
-    const { id,usermail, username, date, post_topic, no_of_vacancy, post_header, post, image } = props
+    const { id, usermail, username, date, post_topic, no_of_vacancy, post_header, post, image } = props
+
     return (
         <>
             <div className="cardContainer contentBg container">
@@ -31,7 +33,7 @@ function PostCard({ props }) {
                     </div>
                     <div>
                         {
-                            (currentuser === usermail) && <Threedot id={id}/>
+                            (currentuser === usermail) && <Threedot id={id} />
                         }
                     </div>
                 </div>
@@ -52,7 +54,7 @@ function PostCard({ props }) {
                     }
                 </div>
                 <div className="mt-3 mb-3">
-                    <label className="mt-2 me-4"><FontAwesomeIcon icon={faHeart} /> 300 </label>
+                    <PostReact id={id} react={props?.react}/>
                     {/* <label><FontAwesomeIcon icon={faCommenting} /><button onClick={handleComment} className={`${style.addComment}`}>  Add comment</button></label> */}
                 </div>
                 {/* <div>
