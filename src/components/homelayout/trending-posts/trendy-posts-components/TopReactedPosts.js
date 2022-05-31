@@ -1,8 +1,8 @@
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
-import TrendingPost from "../../../shared-components/trending-post-comp/TopPost";
+import TrendingPost from "../../../shared-components/trending-post-comp/TrendingPost";
 import { useState, useEffect } from 'react';
 
-function TopPosts() {
+function ToptrendingPosts() {
     const [toppost, setToppost] = useState({})
     useEffect(() => {
         fetch('http://localhost:8080/post/reactpost')
@@ -29,4 +29,4 @@ function TopPosts() {
     );
 }
 
-export default TopPosts;
+export default ToptrendingPosts;

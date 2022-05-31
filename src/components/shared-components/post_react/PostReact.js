@@ -20,7 +20,7 @@ function PostReact({ id,react }) {
     return (
         <>            
             {
-               react.includes(sessionStorage.getItem('currentuser')) ? <FontAwesomeIcon className="text-danger" icon={faHeart} /> : <FontAwesomeIcon icon={faHeart} onClick={() => { like(id) }} />
+               react.includes(sessionStorage.getItem('currentuser')) ? <FontAwesomeIcon className="text-danger cursor" icon={faHeart} /> : <FontAwesomeIcon className="cursor" icon={faHeart} onClick={() => { like(id) }} />
             }
             <label className="ms-2 me-4"> {react?.length} </label>
         </>

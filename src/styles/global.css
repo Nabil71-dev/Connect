@@ -143,3 +143,8 @@ button {
 .form__field:invalid {
   box-shadow: none;
 }
+
+/* Cursor pointer */
+.cursor{
+  cursor: pointer;
+}

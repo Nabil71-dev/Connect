@@ -1,5 +1,5 @@
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import TrendingPost from "../../../shared-components/trending-post-comp/TopPost";
+import TrendingPost from "../../../shared-components/trending-post-comp/TrendingPost";
 import { useState, useEffect } from 'react';
 
 function RecentJobs() {

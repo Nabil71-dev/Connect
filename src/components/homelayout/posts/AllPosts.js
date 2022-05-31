@@ -7,6 +7,8 @@ import Software from './topic-posts/Software';
 import AI_ML_POST from './topic-posts/Ai_Ml';
 import DistributedSys from './topic-posts/DistSys';
 import OthersPost from './topic-posts/Others';
+import FindPeople from '../searched_people/FindPeople';
+import TopPost from './top-posts/TopPost';
 
 function AllPosts() {
     return (
@@ -21,6 +23,8 @@ function AllPosts() {
                 <Route path="/jobposts" element={<JobPosts />} />
                 <Route path="/footprints" element={<FootPrints />} />
                 <Route path="/lookingjob" element={<LookingJob />} />
+                <Route path="/findpeople/:name" element={<FindPeople />} />
+                <Route path="/post/:id" element={<TopPost/>} />
             </Routes>
         </>
     );
