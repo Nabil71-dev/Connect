@@ -1,12 +1,13 @@
 ---------------------Thoughts & motive of dev for "IIUC" connect--------------------------
-#This is the v.1.0 where many things have to fix
-##I'm doing this project just to test my react knowledge
-##In this project I have used so many things from react like (useEffect,useState,useReducer,useContext) most importantly custom hooks..maybe i have to use more in future vertion like (useMemo,useCallback)
 
-####This project isn't reponsive so far, cause I haven't focus on other thing accept features , but it will be added in v.2.0
 
-##There will be a Chatting feature maybe that will be added in v.3.0
+*This is the v.1.0 where many things have to fix-(like profile form update etc etc)
+*I'm doing this project just to test my react knowledge
+*In this project I have used so many things from react like (useEffect,useState,useReducer,useContext) most importantly custom hooks..maybe i have to use more in future vertion like (useMemo,useCallback)
 
+*This project isn't reponsive so far, cause I haven't focus on other thing accept features , but it will be added in v.2.0
+
+*There will be a Chatting feature maybe that will be added in v.3.0
 
 ------------------------About------------------------
 * To run this project u must need npm/Yarn on your machine
