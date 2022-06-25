@@ -1,7 +1,7 @@
----------------------Thoughts & motive of dev for "IIUCconnect"--------------------------
+# Thoughts & motive of dev for "IIUCconnect"
 
 
-*This is the v.1.0 where many things have to fix-(like profile form update etc etc)
+## This is the v.1.0 where many things have to fix-(like profile form update etc etc)
 
 *I'm doing this project just to test my react knowledge
 
