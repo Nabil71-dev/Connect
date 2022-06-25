@@ -2,7 +2,9 @@
 
 
 *This is the v.1.0 where many things have to fix-(like profile form update etc etc)
+
 *I'm doing this project just to test my react knowledge
+
 *In this project I have used so many things from react like (useEffect,useState,useReducer,useContext) most importantly custom hooks..maybe i have to use more in future vertion like (useMemo,useCallback)
 
 *This project isn't reponsive so far, cause I haven't focus on other thing accept features , but it will be added in v.2.0
