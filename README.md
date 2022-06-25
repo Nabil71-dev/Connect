@@ -1,4 +1,4 @@
----------------------Thoughts & motive of dev for "IIUC" connect--------------------------
+---------------------Thoughts & motive of dev for "IIUCconnect"--------------------------
 
 
 *This is the v.1.0 where many things have to fix-(like profile form update etc etc)
