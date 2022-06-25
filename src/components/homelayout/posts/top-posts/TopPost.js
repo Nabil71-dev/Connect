@@ -10,7 +10,11 @@ const TopPost = () => {
     const [post, setPost] = useState({})
 
     useEffect(() => {
-        fetch(`http://localhost:8080/post/toppost/${id}`)
+        fetch(`http://localhost:8080/post/toppost/${id}`,{
+            headers:{
+                'authorization':`Bearer ${sessionStorage.getItem('token')}` 
+            }
+        })
             .then(response => response.json())
             .then(data => {
                 setLoading(false)
@@ -42,3 +46,4 @@ const TopPost = () => {
 }
 
 export default TopPost;
+

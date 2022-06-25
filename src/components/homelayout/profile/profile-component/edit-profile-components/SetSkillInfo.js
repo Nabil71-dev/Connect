@@ -1,4 +1,3 @@
-import style from '../../../../../styles/set_profile.module.css';
 import { InputField } from '../../../../shared-components/input-field/InputField';
 
 function SetSkillinfo() {

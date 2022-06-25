@@ -6,7 +6,11 @@ function RecentJobs() {
     const [recentjob, setRecentjob] = useState({})
 
     useEffect(() => {
-        fetch('http://localhost:8080/post/recentjob')
+        fetch('http://localhost:8080/post/recentjob',{
+            headers:{
+                'authorization':`Bearer ${sessionStorage.getItem('token')}` 
+            }
+        })
             .then(response => response.json())
             .then(data => {
                 setRecentjob(data)

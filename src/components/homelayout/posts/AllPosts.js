@@ -9,10 +9,10 @@ import DistributedSys from './topic-posts/DistSys';
 import OthersPost from './topic-posts/Others';
 import FindPeople from '../searched_people/FindPeople';
 import TopPost from './top-posts/TopPost';
-
+import { DataProvider } from '../../../custom_hooks/fetchData/useApi';
 function AllPosts() {
     return (
-        <>
+        <DataProvider>
             <Routes>
                 <Route path="/" element={<TopicPosts />} />
                 <Route path="/allposts" element={<TopicPosts />} />
@@ -26,7 +26,7 @@ function AllPosts() {
                 <Route path="/findpeople/:name" element={<FindPeople />} />
                 <Route path="/post/:id" element={<TopPost/>} />
             </Routes>
-        </>
+        </DataProvider>
     );
 }
 

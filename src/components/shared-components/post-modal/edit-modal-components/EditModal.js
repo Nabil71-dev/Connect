@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import Selector from '../post-modal-components/Selector';
 import style from "../../../../styles/trending_post.module.css"
-
-
+import { useApi } from '../../../../custom_hooks/fetchData/useApi';
 function Modalform({ closeModal, id }) {
-    
+
+    const { state, dispatch } = useApi()
     const [header, setHeader] = useState();
     const [post, setPost] = useState();
 
@@ -17,19 +17,30 @@ function Modalform({ closeModal, id }) {
         fetch(`http://localhost:8080/post/updatepost/${id}`, {
             method: 'POST',
             headers: {
-                'content-type': 'application/json'
+                'authorization':`Bearer ${sessionStorage.getItem('token')}`, 
+                'Content-Type': 'application/json'
             },
             body: JSON.stringify(data)
         })
             .then(response => response.json())
-            .then(result => {
-                alert(result.message)
+            .then(response => {
+                state?.data?.result.map(post => {
+                    if (post.id === id) {
+                        post.post_header=data.post_header
+                        post.post=data.post
+                    }
+                })
+                dispatch({ type: 'SUCCESS', result: state.data })
+                alert(response.message)
                 closeModal();
             })
     }
-
     useEffect(() => {
-        fetch(`http://localhost:8080/post/editpost/${id}`)
+        fetch(`http://localhost:8080/post/editpost/${id}`,{
+            headers: {
+                'authorization':`Bearer ${sessionStorage.getItem('token')}`
+            }
+        })
             .then(response => response.json())
             .then(result => {
                 setHeader(result.result[0].post_header)

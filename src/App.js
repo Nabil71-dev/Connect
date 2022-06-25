@@ -1,6 +1,5 @@
 //Make all nav-button and login reg form more reusable
 //Comment part will be used after completing server
-
 import { Routes, Route } from 'react-router-dom';
 import './styles/bootstrap.min.css';
 import './styles/global.css';
@@ -17,17 +16,17 @@ function App() {
   return (
     <div className="main-bg">
       <AuthProvider>
-        <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Registration />} />
-          <Route element={<RouteVerify />}>
-            <Route path="/home/*" element={<HomeLayout />} />
-            <Route path="/profile" element={<ProfileLayout />} />
-            <Route path="/profile/:mail" element={<ProfileLayout />} />
-            <Route path="/editProfile" element={<EditProfile />} />
-          </Route>
-        </Routes>
+          <Routes>
+            <Route path="/" element={<Login />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Registration />} />
+            <Route element={<RouteVerify />}>
+              <Route path="/home/*" element={<HomeLayout />} />
+              <Route path="/profile" element={<ProfileLayout />} />
+              <Route path="/profile/:mail" element={<ProfileLayout />} />
+              <Route path="/editProfile" element={<EditProfile />} />
+            </Route>
+          </Routes>
       </AuthProvider>
     </div>
   );

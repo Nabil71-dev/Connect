@@ -11,6 +11,7 @@ const FindPeople = () => {
         fetch(`http://localhost:8080/user/search`, {
             method: 'POST',
             headers: {
+                'authorization':`Bearer ${sessionStorage.getItem('token')}`,
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({

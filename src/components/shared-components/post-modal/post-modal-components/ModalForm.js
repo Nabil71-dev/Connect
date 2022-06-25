@@ -1,8 +1,8 @@
-import { useState, useEffect } from 'react';
+//Must look into this component in V.1.1 ->instant state change n all 
+import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import Selector from './Selector';
-import style from "../../../../styles/trending_post.module.css"
-
+import style from '../../../../styles/trending_post.module.css'
 function Modalform({ closeModal }) {
 
     const [file, setFile] = useState(null);
@@ -29,12 +29,16 @@ function Modalform({ closeModal }) {
             formData.append('id', uuidv4());
 
             fetch(`http://localhost:8080/post/addpostimg`, {
+                headers: {
+                    'authorization': `Bearer ${sessionStorage.getItem('token')}`
+                },
                 method: 'POST',
                 body: formData
             })
                 .then(response => response.json())
-                .then(result => {
-                    alert(result.message)
+                .then(response => {
+                    alert(response.message)
+                    //window.location.reload()
                     closeModal();
                 })
         }
@@ -50,6 +54,7 @@ function Modalform({ closeModal }) {
             fetch(`http://localhost:8080/post/addpostnoimg`, {
                 method: 'POST',
                 headers: {
+                    'authorization': `Bearer ${sessionStorage.getItem('token')}`,
                     'content-type': 'application/json'
                 },
                 body: JSON.stringify(data)
@@ -57,6 +62,7 @@ function Modalform({ closeModal }) {
                 .then(response => response.json())
                 .then(result => {
                     alert(result.message)
+                    //window.location.reload()
                     closeModal();
                 })
         }

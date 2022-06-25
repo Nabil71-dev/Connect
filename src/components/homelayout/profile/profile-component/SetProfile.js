@@ -1,6 +1,6 @@
 import { Formik, Form } from 'formik';
 import { useState } from 'react';
-import { NavLink,useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouse, faPaperPlane, faUpload } from '@fortawesome/free-solid-svg-icons'
 
@@ -27,6 +27,9 @@ function EditProfile() {
 
       form_Data.append('user_pic', profilepic);
       fetch(`http://localhost:8080/user/profilepic/${sessionStorage.getItem('currentuser')}`, {
+        headers: {
+          'authorization': `Bearer ${sessionStorage.getItem('token')}`
+        },
         method: 'POST',
         body: form_Data
       })

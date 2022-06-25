@@ -4,8 +4,6 @@ import style from '../../../styles/navbar.module.css';
 import Logout from './nav_compnents/Logout';
 
 const SideNav = () => {
-    
-
     return (
         <div className={`${style.sideNavbg} contentBg text-center`}>
             <div>

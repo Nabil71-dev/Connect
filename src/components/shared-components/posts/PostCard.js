@@ -48,9 +48,11 @@ function PostCard({ props }) {
                     {
                         post_header && <h3 className="mt-2 mb-3"> {post_header} </h3>
                     }
-                    <Article text={post} />
                     {
-                        image && <img src={`data:image/png;base64,${image?.img?.data}`} alt="Post_image" className={`${style.postImage}`} />
+                        post && <Article text={post} /> 
+                    }
+                    {
+                        image && <img src={`data:image/png;base64,${image?.img?.data}`} alt="Post_image" className={`${style.postImage} mt-2`} />
                     }
                 </div>
                 <div className="mt-3 mb-3">

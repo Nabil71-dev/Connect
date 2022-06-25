@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import style from '../../../../styles/post-card.module.css';
 import PostModal from '../../post-modal/PostModal';
-
+import { useApi } from '../../../../custom_hooks/fetchData/useApi';
 function Threedot({ id }) {
+
+    const { state, dispatch } = useApi()
     const [edit, toggleEdit] = useState(false);
     const [isOpen, setOpen] = useState(false);
     const handleEdit = () => {
@@ -20,15 +22,23 @@ function Threedot({ id }) {
         fetch(`http://localhost:8080/post/deletepost`, {
             method: 'DELETE',
             headers: {
+                'authorization':`Bearer ${sessionStorage.getItem('token')}`, 
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
                 id
             })
         }).then(response => response.json())
-        .then(result => {
-                alert(result.message)
-        })
+            .then(response => {
+                const result = state?.data?.result.filter((post) => {
+                    return post.id !== id;
+                });
+                const data = {
+                    result
+                }
+                dispatch({ type: 'SUCCESS', result: data })
+                alert(response.message)
+            })
     }
 
     return (

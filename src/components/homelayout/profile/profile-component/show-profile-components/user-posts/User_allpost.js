@@ -1,12 +1,12 @@
 import SharePost from "../../../../../shared-components/share-post-button/SharePost";
 import { useParams } from "react-router-dom";
-import useUserpost from "../../../../../../custom_hooks/user_post/useUserpost";
+import {useApi} from "../../../../../../custom_hooks/fetchData/useApi";
 import PostCard from "../../../../../shared-components/posts/PostCard";
 function UserAllpost() {
     const { mail } = useParams();
-
-    const { state } = useUserpost(mail);
-    const { loading, error, userpost } = state;
+    const {state, postdata }=useApi()
+    postdata(`http://localhost:8080/post/userspost/${mail}`);
+    const { loading, error, data } = state;
 
     return (
         <>
@@ -17,10 +17,10 @@ function UserAllpost() {
                 loading && <h3 className="text-center">Loading...</h3>
             }
             {
-                userpost.result && userpost?.result.map(data => <PostCard key={data._id} props={data} />)
+                data.result && data?.result.map(data => <PostCard key={data._id} props={data} />)
             }
             {
-                !loading && userpost.message && <div>No data found</div>
+                !loading && data.message && <div>No data found</div>
             }
             {
                 error && <h3 className="text-center">{error}</h3>
