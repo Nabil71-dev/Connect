@@ -46,6 +46,9 @@ function EditProfile() {
 
       form_Data.append('cv', cv);
       fetch(`http://localhost:8080/user/profilepic/${sessionStorage.getItem('currentuser')}`, {
+        headers: {
+          'authorization': `Bearer ${sessionStorage.getItem('token')}`
+        },
         method: 'POST',
         body: form_Data
       })

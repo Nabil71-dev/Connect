@@ -1,10 +1,11 @@
-//Must look into this component in V.1.1 ->instant state change n all 
 import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import Selector from './Selector';
 import style from '../../../../styles/trending_post.module.css'
+import {useApi} from '../../../../custom_hooks/fetchData/useApi'
 function Modalform({ closeModal }) {
 
+    const {dispatch}=useApi()
     const [file, setFile] = useState(null);
 
     const handlePicChange = (e) => {
@@ -37,8 +38,8 @@ function Modalform({ closeModal }) {
             })
                 .then(response => response.json())
                 .then(response => {
-                    alert(response.message)
-                    //window.location.reload()
+                    dispatch({ type: 'SUCCESS', result: response })
+                    //alert(response.message)
                     closeModal();
                 })
         }
@@ -60,9 +61,9 @@ function Modalform({ closeModal }) {
                 body: JSON.stringify(data)
             })
                 .then(response => response.json())
-                .then(result => {
-                    alert(result.message)
-                    //window.location.reload()
+                .then(response => {
+                    dispatch({ type: 'SUCCESS', result:response })
+                    //alert(response.message)
                     closeModal();
                 })
         }

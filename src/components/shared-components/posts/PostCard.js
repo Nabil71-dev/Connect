@@ -16,12 +16,12 @@ function PostCard({ props }) {
     //     toggleComment(!comment);
     // }
     const { id, usermail, username, date, post_topic, no_of_vacancy, post_header, post, image } = props
-
     return (
         <>
             <div className="cardContainer contentBg container">
                 <div className="d-flex justify-content-between mt-3 mb-2">
                     <div className="d-flex">
+
                         <NavLink to={`/profile/${usermail}`}><img src={profile_pic} alt="Profile_Picture" className="post-userpic me-2" /></NavLink>
                         {/* <Link to="/profile"><img src={profile_pic} alt="Profile_Picture" className="post-userpic me-2" /></Link> */}
                         <div>

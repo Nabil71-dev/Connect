@@ -25,7 +25,7 @@ function RecentJobs() {
     
     return (
         <div className="mt-4">
-            <h4>Recent Job</h4>
+            <h3 className="mb-3">Recent Job</h3>
             {
                 recentjob.result && recentjob?.result?.map(info => <TrendingPost key={Math.random() * 10} props={info} />)
             }
