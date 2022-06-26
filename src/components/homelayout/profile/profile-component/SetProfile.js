@@ -76,6 +76,9 @@ function EditProfile() {
     form_Data.append('personal_description', data.personal_description);
 
     fetch(`http://localhost:8080/user/updateprofile/${sessionStorage.getItem('currentuser')}`, {
+      headers: {
+        'authorization': `Bearer ${sessionStorage.getItem('token')}`
+      },
       method: 'POST',
       body: form_Data
     })
